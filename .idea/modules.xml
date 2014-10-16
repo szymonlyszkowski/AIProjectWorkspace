@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ai-dicewars-algorithms/ai-dicewars-algorithms.iml" filepath="$PROJECT_DIR$/ai-dicewars-algorithms/ai-dicewars-algorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ai-dicewars-interface/ai-dicewars-interface.iml" filepath="$PROJECT_DIR$/ai-dicewars-interface/ai-dicewars-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ai-dicewars-structure/ai-dicewars-structure.iml" filepath="$PROJECT_DIR$/ai-dicewars-structure/ai-dicewars-structure.iml" />
+    </modules>
+  </component>
+</project>
+
