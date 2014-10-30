@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="ai-dicewars-interface">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/ai-dicewars-interface/ai-dicewars-interface.jar!/" />
+      <root url="jar://$USER_HOME$/ai-dicewars-interface.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
