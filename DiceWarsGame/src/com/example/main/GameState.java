@@ -57,6 +57,25 @@ public class GameState {
         return result;
     }
 
+    public void updateGameState(){
+
+        while(gameEnds()==false){
+
+            updateHashMap();
+
+            // tutaj powinno pojawic sie cos z ruchem gracza - nie moja dzialka juz
+        }
+
+    }
+
+    private void updateHashMap()
+    {
+        for(Vertex vertex: getVerticesHashMap().values()){
+
+            vertices.set(vertex.getIndex(),vertex);
+        }
+    }
+
     public void addDicesToFields(int player) {
 
         for (Vertex vertex : getVerticesHashMap().values()) {
