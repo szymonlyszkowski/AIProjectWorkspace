@@ -11,6 +11,7 @@ import java.util.ArrayList;
  * Created by Krzysiek on 2014-10-26.
  */
 public class GraphCanvas extends Canvas implements MouseListener {
+
     public static final Color COLOR_PLAYER1 = Color.CYAN;
     public static final Color COLOR_PLAYER2 = Color.YELLOW;
     public static final Color COLOR_PLAYER_BOTH = Color.GREEN;
