@@ -1,6 +1,9 @@
 package com.example.main;
 
 
+import javax.swing.*;
+import java.awt.*;
+
 public class MainWindow {
     public static void main(String[] args) {
         JFrame frame = new JFrame("GraphCanvas");
