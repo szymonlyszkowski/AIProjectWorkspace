@@ -1,5 +1,4 @@
 package com.example.main;
-import com.example.main.UIVertex;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -26,6 +25,7 @@ public class Vertex {
 		this.adjacencyList = new ArrayList<Integer>();
 		this.hasChildren = false;
 		 this.player = new Random().nextInt(2);
+
 	}
 	
 
@@ -67,7 +67,9 @@ public class Vertex {
 	}
 
 	public void setNrOfDices(int nrOfDices) {
-		this.nrOfDices = nrOfDices;
+		
+                        this.nrOfDices = nrOfDices;
+                        if (this.nrOfDices>8) this.nrOfDices = 8;
 	}
 	
 	
