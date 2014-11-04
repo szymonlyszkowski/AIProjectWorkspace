@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Random;
+import javax.swing.JOptionPane;
 
 /**
  * Created by szymonlyszkowski on 30.10.14.
@@ -37,20 +38,23 @@ public class GameState {
      * @return
      */
     public boolean subjugationSuccess(Vertex attacker, Vertex defensive) {
-
         boolean result;
-
-        int dicesDefensive = /*getVerticesHashMap().get(defensive.getIndex())*/defensive.getNrOfDices();
-        int dicesAttacker = /*getVerticesHashMap().get(attacker.getIndex())*/attacker.getNrOfDices();
-
+        // throw all dices
+        int dicesDefensive = throwTheDice(defensive.getNrOfDices());
+        int dicesAttacker = throwTheDice(attacker.getNrOfDices());
+        
+        
         if (dicesAttacker <= dicesDefensive) {
-            /*getVerticesHashMap().get(*/attacker/*.getIndex())*/.setNrOfDices(1);
+            attacker.setNrOfDices(1);
+            JOptionPane.showMessageDialog(null, dicesAttacker + " vs " + dicesDefensive + "\n" + "Fight lost!" );
+            System.out.println("lost");
             result = false;
         } else {
-
-            /*getVerticesHashMap().get(*/attacker/*.getIndex())*/.setNrOfDices(1);
-           /* getVerticesHashMap().get(*/defensive/*.getIndex())*/.setNrOfDices(dicesAttacker - 1);
-            /*getVerticesHashMap().get(*/defensive/*.getIndex())*/.setPlayer(/*getVerticesHashMap().get(*/attacker/*.getIndex())*/.getPlayer());
+            defensive.setNrOfDices(attacker.getNrOfDices() - 1);
+            attacker.setNrOfDices(1);
+            defensive.setPlayer(attacker.getPlayer());
+            JOptionPane.showMessageDialog(null, dicesAttacker + " vs " + dicesDefensive + "\n" + "Fight won!" );
+            System.out.println("won");
             result = true;
         }
 
@@ -76,22 +80,25 @@ public class GameState {
         }
     }
 
+    // editted by Lukasz
     public void addDicesToFields(int player) {
-
-        for (Vertex vertex : getVerticesHashMap().values()) {
-
+    	int mostAdjacentEdges = 0;
+    	//determine max adjacent edges
+        for (Vertex vertex : vertices) {
             if (vertex.getPlayer() == player) {
-                int edges = vertex.getNrOfAdjacentEdges();
-                if (edges <= 0) {
-                    vertex.setNrOfDices(vertex.getNrOfDices() + generateRandomDices());
-                } else {
-
-                    vertex.setNrOfDices(vertex.getNrOfDices() + edges);
-                }
-
+            	if (vertex.getNrOfAdjacentEdges() > mostAdjacentEdges)
+            		mostAdjacentEdges = vertex.getNrOfAdjacentEdges();
             }
         }
-
+        //adding new dices
+        Random rand = new Random();
+        for (Vertex vertex : vertices) {
+            if (vertex.getPlayer() == player) {
+        		int newDices = rand.nextInt(mostAdjacentEdges);
+        		vertex.setNrOfDices(vertex.getNrOfDices() + newDices);
+        		mostAdjacentEdges -= newDices;
+            }
+        }
     }
 
     /**
@@ -104,7 +111,8 @@ public class GameState {
         boolean end = false;
         int player1 = 0;
         int player2 = 0;
-        for (Vertex vertex : getVerticesHashMap().values()) {
+//        for (Vertex vertex : getVerticesHashMap().values()) {
+        for (Vertex vertex : vertices) {
 
             if (vertex.getPlayer() == 1) {
                 ++player1;
@@ -176,4 +184,14 @@ public class GameState {
     public HashMap<Integer, Vertex> getVerticesHashMap() {
         return verticesHashMap;
     }
+    
+    int throwTheDice(int dices) {
+		Random rand = new Random();
+		int result = 0;
+		for (int i=0; i<dices; i++) {
+			int randomNum = rand.nextInt( 6 ) + 1;
+			result += randomNum;
+		}
+		return result;
+	}
 }
