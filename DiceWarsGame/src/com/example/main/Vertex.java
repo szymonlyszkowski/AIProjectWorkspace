@@ -26,6 +26,7 @@ public class Vertex {
 		this.adjacencyList = new ArrayList<Integer>();
 		this.hasChildren = false;
 		 this.player = new Random().nextInt(2);
+
 	}
 	
 

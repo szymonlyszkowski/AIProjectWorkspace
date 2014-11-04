@@ -40,17 +40,17 @@ public class GameState {
 
         boolean result;
 
-        int dicesDefensive = getVerticesHashMap().get(defensive.getIndex()).getNrOfDices();
-        int dicesAttacker = getVerticesHashMap().get(attacker.getIndex()).getNrOfDices();
+        int dicesDefensive = /*getVerticesHashMap().get(defensive.getIndex())*/defensive.getNrOfDices();
+        int dicesAttacker = /*getVerticesHashMap().get(attacker.getIndex())*/attacker.getNrOfDices();
 
         if (dicesAttacker <= dicesDefensive) {
-            getVerticesHashMap().get(attacker.getIndex()).setNrOfDices(1);
+            /*getVerticesHashMap().get(*/attacker/*.getIndex())*/.setNrOfDices(1);
             result = false;
         } else {
 
-            getVerticesHashMap().get(attacker.getIndex()).setNrOfDices(1);
-            getVerticesHashMap().get(defensive.getIndex()).setNrOfDices(dicesAttacker - 1);
-            getVerticesHashMap().get(defensive.getIndex()).setPlayer(getVerticesHashMap().get(attacker.getIndex()).getPlayer());
+            /*getVerticesHashMap().get(*/attacker/*.getIndex())*/.setNrOfDices(1);
+           /* getVerticesHashMap().get(*/defensive/*.getIndex())*/.setNrOfDices(dicesAttacker - 1);
+            /*getVerticesHashMap().get(*/defensive/*.getIndex())*/.setPlayer(/*getVerticesHashMap().get(*/attacker/*.getIndex())*/.getPlayer());
             result = true;
         }
 

@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * Created by Krzysiek on 2014-10-26.
  */
 public class GraphCanvas extends Canvas implements MouseListener {
-    public static final Color COLOR_PLAYER1 = Color.BLUE;
+    public static final Color COLOR_PLAYER1 = Color.ORANGE;
     public static final Color COLOR_PLAYER2 = Color.YELLOW;
     public static final Color COLOR_PLAYER_BOTH = Color.GREEN;
     public static final Color COLOR_PLAYER_ACTIVE = Color.RED;
@@ -20,11 +20,15 @@ public class GraphCanvas extends Canvas implements MouseListener {
     private UIVertex activeVertex;
     private Graph graph;
 
+    private GameState gameState;
+
     public GraphCanvas(Graph graph) {
         this.graph = graph;
         this.uiVertices = new ArrayList<UIVertex>();
         this.uiEdges = new ArrayList<UIEdge>();
         this.activeVertex = null;
+
+        gameState = new GameState(graph);
 
         initUIVertices();
         initUIEdges();
@@ -110,9 +114,22 @@ public class GraphCanvas extends Canvas implements MouseListener {
                 activeVertex.setActive(true);
             } else {
                 JOptionPane.showMessageDialog(null, "Clicked from Vertex:\n" + activeVertex.getBaseVertex().toString() + "\nto vertex:\n"+clickedVertex.getBaseVertex().toString());
+
+                if((activeVertex.getBaseVertex().getAdjacencyList()).indexOf(clickedVertex.getBaseVertex().getIndex()) >= 0
+                        &&
+                        activeVertex.getBaseVertex().getPlayer() != clickedVertex.getBaseVertex().getPlayer()
+                        &&
+                        activeVertex.getBaseVertex().getNrOfDices() > 1)
+                         {
+                /*if(*/
+                    gameState.subjugationSuccess(activeVertex.getBaseVertex(), clickedVertex.getBaseVertex());/* == false)*/
+                    // activeVertex.getBaseVertex().setNrOfDices(1);
+                }
                 activeVertex.setActive(false);
                 clickedVertex.setActive(false);
                 activeVertex = null;
+
+
             }
         }
         else {
