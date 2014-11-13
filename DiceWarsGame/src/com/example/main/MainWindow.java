@@ -6,9 +6,11 @@ import java.awt.*;
 
 public class MainWindow {
     public static void main(String[] args) {
+        int gameType;
+        
         JFrame frame = new JFrame("GraphCanvas");
 
-        Graph graph = new Graph(12, 4);
+        Graph graph = new Graph(12, 4 );
 
         while(!graph.isSuccessful()){
             graph.generateGraph();
@@ -16,6 +18,7 @@ public class MainWindow {
         System.out.println("GRAPH CREATED");
         System.out.println(graph.toString());
 
+        
         GameState gameState = new GameState(graph);
         gameState.initGame();
 
@@ -26,5 +29,9 @@ public class MainWindow {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+        
+        //gameType = JOptionPane.showConfirmDialog(null,"Play AI vs AI?","Choose game type", JOptionPane.YES_NO_OPTION);
+       // System.out.println("mode " + gameType);
+        
     }
 }

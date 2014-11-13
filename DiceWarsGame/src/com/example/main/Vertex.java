@@ -1,10 +1,12 @@
 package com.example.main;
 
+import ai.dicewars.common.VertexBase;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 
-public class Vertex {
+public class Vertex implements VertexBase{
 	
 	
 	private int index;
@@ -48,11 +50,13 @@ public class Vertex {
 	}
 	
 	
+        @Override
 	public int getIndex(){
 		return index;
 	}
 	
 	
+        @Override
 	public int getPlayer() {
 		return player;
 	}
@@ -62,6 +66,7 @@ public class Vertex {
 	}
 	
 	
+        @Override
 	public int getNrOfDices() {
 		return nrOfDices;
 	}
@@ -128,5 +133,12 @@ public class Vertex {
 
     public void setUiVertex(UIVertex uiVertex) {
         this.uiVertex = uiVertex;
+    }
+
+    @Override
+    public List<Integer> getNeighbours() {
+        List<Integer> neighbours;
+        neighbours = adjacencyList;
+        return neighbours;
     }
 }

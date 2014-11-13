@@ -61,6 +61,8 @@ public class UIVertex {
         g.fillOval(this.x,this.y,SIZE_VERTEX,SIZE_VERTEX);
         g.setColor(Color.BLACK);
         g.drawString(Integer.toString(this.baseVertex.getNrOfDices()), (int)(this.x+SIZE_VERTEX/2.5), (int)(this.y+SIZE_VERTEX/1.5));
+        
+        g.drawString(Integer.toString(this.baseVertex.getIndex()), (int)(this.x+16+SIZE_VERTEX/2.5), (int)(this.y+16+SIZE_VERTEX/1.5));
     }
 
     public boolean isClicked(int clickX, int clickY) {

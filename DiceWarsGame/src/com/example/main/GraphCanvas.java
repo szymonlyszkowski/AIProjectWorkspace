@@ -6,6 +6,7 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created by Krzysiek on 2014-10-26.
@@ -22,13 +23,19 @@ public class GraphCanvas extends Canvas implements MouseListener {
     private ArrayList<UIVertex> uiVertexList;
     private UIVertex activeVertex;
     private Graph graph;
+    
+    
+    
+    
 
     
     
     private GameState gameState;
     
-    private Boolean validMove;
-    private int whoseTurn;
+    //private Boolean validMove;
+//    private int whoseTurn;
+    
+    private  Boolean isPlayerVsPlayer;
 
     public GraphCanvas(Graph graph) {
         this.graph = graph;
@@ -37,7 +44,8 @@ public class GraphCanvas extends Canvas implements MouseListener {
         this.activeVertex = null;
 
         gameState = new GameState(graph);
-        this.whoseTurn = 1;
+        //this.whoseTurn = 1;
+        this.isPlayerVsPlayer = true;
 
         initUIVertices();
         initUIEdges();
@@ -88,7 +96,8 @@ public class GraphCanvas extends Canvas implements MouseListener {
     @Override
     public void paint(Graphics g) {
         int vertexCount = this.uiVertices.size();
-
+        
+        
         for(UIEdge singleEdge : this.uiEdges) {
             singleEdge.paint(g);
         }
@@ -101,7 +110,14 @@ public class GraphCanvas extends Canvas implements MouseListener {
         g.setColor(Color.BLACK);
         g.drawString("NEXT TURN",15,27);
         
-        if (whoseTurn == 1) {
+        //for test
+        g.setColor(COLOR_FINISH_TURN);
+        g.fillRect(10, 80, 85, 25);
+        g.setColor(Color.BLACK);
+        g.drawString("PLAY!",15,100);
+        
+        
+        if (gameState.getWhoseTurn() == 1) {
            
             g.setColor(COLOR_PLAYER1);
             g.fillRect(10, 45, 120, 25);
@@ -118,67 +134,65 @@ public class GraphCanvas extends Canvas implements MouseListener {
         
     }
 
+
+    
+    
+    
     @Override
     public void mouseClicked(MouseEvent e) {
         int x = e.getX();
         int y = e.getY();
         // isButton ? refactor!
         if ((x>10 && x<95) && (y>10 && y<35)) {
-        	//JOptionPane.showMessageDialog(null, "Turn has been finished!");
-        	gameState.addDicesToFields(whoseTurn);
-        	whoseTurn =  (whoseTurn == 1) ? 2 : 1;
-                
+
+                gameState.endTurn();
                 
         }
         
-        UIVertex clickedVertex = null;
-        for(UIVertex singleVertex : this.uiVertices) {
-            if(singleVertex.isClicked(x,y)) {
-                clickedVertex = singleVertex;
-            }
+         if ((x>10 && x<95) && (y>80 && y<105)) {
+        	
+             // Game loop
+             // is
+             // here
+             gameState.gameLoop();
+          
+                
         }
-        /*if(clickedVertex != null) {
-            activeVertex = clickedVertex;
-            JOptionPane.showMessageDialog(null, "Click detected on vertex:\n" + clickedVertex.getBaseVertex().toString()+"\nX:" + e.getX() + " Y:" + e.getY());
-        }
-        else {
-            JOptionPane.showMessageDialog(null, "No vertex clicked.\nX:" + e.getX() + " Y:" + e.getY());
-        }*/
-        if(clickedVertex != null) {
-        	if(activeVertex == null && clickedVertex.getBaseVertex().getPlayer() != whoseTurn) {
-        		JOptionPane.showMessageDialog(null, "It is not yours!");
-        		activeVertex = null;
-        	}
-        	else if(clickedVertex == activeVertex) {
-                activeVertex = null;
-                clickedVertex.setActive(false);
-            }
-            else if (activeVertex == null) {
-                activeVertex = clickedVertex;
-                activeVertex.setActive(true);
-            } else {
-                //JOptionPane.showMessageDialog(null, "Clicked from Vertex:\n" + activeVertex.getBaseVertex().toString() + "\nto vertex:\n"+clickedVertex.getBaseVertex().toString());
-
-                if((activeVertex.getBaseVertex().getAdjacencyList()).indexOf(clickedVertex.getBaseVertex().getIndex()) >= 0
-                        &&
-                        activeVertex.getBaseVertex().getPlayer() != clickedVertex.getBaseVertex().getPlayer()
-                        &&
-                        activeVertex.getBaseVertex().getNrOfDices() > 1) {
-                	gameState.subjugationSuccess(activeVertex.getBaseVertex(), clickedVertex.getBaseVertex());
-                	validMove = true;
-                } else {
-                	JOptionPane.showMessageDialog(null, "Invalid move!");
-                	validMove = false;
+        
+        //Enable mouse events for the graph only in PvP mode 
+        //
+        
+        if(isPlayerVsPlayer == true) {
+            UIVertex clickedVertex = null;
+            for (UIVertex singleVertex : this.uiVertices) {
+                if (singleVertex.isClicked(x, y)) {
+                    clickedVertex = singleVertex;
                 }
+            }
+
+            if (clickedVertex != null) {
+                if (activeVertex == null && clickedVertex.getBaseVertex().getPlayer() != gameState.getWhoseTurn()) {
+                    JOptionPane.showMessageDialog(null, "It is not yours!");
+                    activeVertex = null;
+                } else if (clickedVertex == activeVertex) {
+                    activeVertex = null;
+                    clickedVertex.setActive(false);
+                } else if (activeVertex == null) {
+                    activeVertex = clickedVertex;
+                    activeVertex.setActive(true);
+                } else {
+
+                    gameState.doMove(activeVertex.getBaseVertex(), clickedVertex.getBaseVertex());
+                    activeVertex.setActive(false);
+                    clickedVertex.setActive(false);
+                    activeVertex = null;
+                }
+            } else if (activeVertex != null) {
                 activeVertex.setActive(false);
-                clickedVertex.setActive(false);
                 activeVertex = null;
             }
         }
-        else if (activeVertex != null) {
-            activeVertex.setActive(false);
-            activeVertex = null;
-        }
+        
         if (!gameState.gameEnds())
         	this.repaint();
         else
@@ -204,4 +218,5 @@ public class GraphCanvas extends Canvas implements MouseListener {
     public void mouseExited(MouseEvent e) {
 
     }
+
 }
