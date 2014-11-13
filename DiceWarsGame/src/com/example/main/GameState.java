@@ -1,8 +1,8 @@
 package com.example.main;
 
+import ai.dicewars.common.Answer;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.Random;
 import javax.swing.JOptionPane;
 
@@ -13,18 +13,26 @@ public class GameState {
 
     private Graph graph;
     private ArrayList<Vertex> vertices;
-    private HashMap<Integer, Vertex> verticesHashMap;
+    //private HashMap<Integer, Vertex> verticesHashMap;
+    
+    private Boolean validMove;
+    private int whoseTurn;
+    
+    //create instances of agents 
+    AgentRandom player1 = new AgentRandom(1);
+    AgentRandom player2 = new AgentRandom(2);
 
     public GameState(Graph graph) {
         this.graph = graph;
         this.vertices = this.graph.getGraphStructure();
-        this.verticesHashMap = new HashMap<Integer, Vertex>();
+      //  this.verticesHashMap = new HashMap<Integer, Vertex>();
+        this.whoseTurn = 1;
     }
 
     public void initGame() {
         assignPlayersToVertices(this.vertices);
         assignDicesToVertices(this.vertices);
-        addVerticesToHashMap(this.getVerticesHashMap(), this.vertices);
+//        addVerticesToHashMap(this.getVerticesHashMap(), this.vertices);
     }
 
     /**
@@ -44,16 +52,23 @@ public class GameState {
         int dicesAttacker = throwTheDice(attacker.getNrOfDices());
         
         
+        
         if (dicesAttacker <= dicesDefensive) {
             attacker.setNrOfDices(1);
-            JOptionPane.showMessageDialog(null, dicesAttacker + " vs " + dicesDefensive + "\n" + "Fight lost!" );
+            JOptionPane.showMessageDialog(null, 
+                    "Player " + attacker.getPlayer() + " moves from " + attacker.getIndex() + " to " + defensive.getIndex() + "\n" +
+                            dicesAttacker + " to " + dicesDefensive + "\n" + 
+                            "Fight lost!" );
+            
             System.out.println("lost");
             result = false;
         } else {
             defensive.setNrOfDices(attacker.getNrOfDices() - 1);
             attacker.setNrOfDices(1);
             defensive.setPlayer(attacker.getPlayer());
-            JOptionPane.showMessageDialog(null, dicesAttacker + " vs " + dicesDefensive + "\n" + "Fight won!" );
+            JOptionPane.showMessageDialog(null, 
+                   "Player " + attacker.getPlayer() + " moves from " + attacker.getIndex() + " to " + defensive.getIndex() + "\n" +
+                    dicesAttacker + " to " + dicesDefensive + "\n" + "Fight won!" );
             System.out.println("won");
             result = true;
         }
@@ -61,24 +76,7 @@ public class GameState {
         return result;
     }
 
-    public void updateGameState(){
 
-        while(gameEnds()==false){
-
-            updateHashMap();
-
-            // tutaj powinno pojawic sie cos z ruchem gracza - nie moja dzialka juz
-        }
-
-    }
-
-    private void updateHashMap()
-    {
-        for(Vertex vertex: getVerticesHashMap().values()){
-
-            vertices.set(vertex.getIndex(),vertex);
-        }
-    }
 
     // editted by Lukasz
     public void addDicesToFields(int player) {
@@ -126,12 +124,7 @@ public class GameState {
         return end;
     }
 
-    private void addVerticesToHashMap(HashMap<Integer, Vertex> verticesHashMap, ArrayList<Vertex> vertices) {
 
-        for (Vertex vertex : vertices) {
-            verticesHashMap.put(vertex.getIndex(), vertex);
-        }
-    }
 
     private ArrayList<Integer> createPlayersShuffle() {
         ArrayList<Integer> players = new ArrayList();
@@ -181,9 +174,7 @@ public class GameState {
     }
 
 
-    public HashMap<Integer, Vertex> getVerticesHashMap() {
-        return verticesHashMap;
-    }
+
     
     int throwTheDice(int dices) {
 		Random rand = new Random();
@@ -194,4 +185,108 @@ public class GameState {
 		}
 		return result;
 	}
+
+//edit by Marcin
+    public void gameLoop() {
+        System.out.println("The game is rolling");
+        while (gameEnds() == false) {
+
+            if (getWhoseTurn() == 1) {
+
+                Answer ans = player1.makeMove(vertices);
+
+                if (ans.isEmptyMove() == true) {
+                    endTurn();
+
+                } else {
+                    int from = ans.getFrom();
+                    Vertex vFrom = null;
+
+                    int to = ans.getTo();
+                    Vertex vTo = null;
+
+                    for (Vertex vertf : vertices) {
+
+                        if (vertf.getIndex() == from) {
+                            vFrom = vertf;
+                            break;
+                        }
+                    }
+                    for (Vertex vertt : vertices) {
+
+                        if (vertt.getIndex() == to) {
+                            vTo = vertt;
+                            break;
+                        }
+                    }
+                    doMove(vFrom, vTo);
+                }
+
+                if (getWhoseTurn() == 2) {
+
+                    Answer ans2 = player2.makeMove(vertices);
+
+                    if (ans2.isEmptyMove() == true) {
+                        endTurn();
+
+                    } else {
+
+                        int from = ans.getFrom();
+                        Vertex vFrom = null;
+
+                        int to = ans.getTo();
+                        Vertex vTo = null;
+
+                        for (Vertex vertf : vertices) {
+
+                            if (vertf.getIndex() == from) {
+                                vFrom = vertf;
+                                break;
+                            }
+                        }
+                        for (Vertex vertt : vertices) {
+
+                            if (vertt.getIndex() == to) {
+                                vTo = vertt;
+                                break;
+                            }
+                        }
+                        doMove(vFrom, vTo);
+                    }
+                }
+            }
+        }
+    }
+    
+        public void doMove(Vertex attackerVertex, Vertex defenderVertex){
+
+                if((attackerVertex.getAdjacencyList()).indexOf(defenderVertex.getIndex()) >= 0
+                        &&
+                        attackerVertex.getPlayer() != defenderVertex.getPlayer()
+                        &&
+                        attackerVertex.getNrOfDices() > 1
+                        &&
+                        attackerVertex.getPlayer() == whoseTurn) {
+                	subjugationSuccess(attackerVertex, defenderVertex);
+                	validMove = true;
+                } else {
+                	JOptionPane.showMessageDialog(null, "Invalid move!");
+                	validMove = false;
+                }
+            
+    }
+            
+        public void endTurn() {  
+            addDicesToFields(whoseTurn);
+            whoseTurn =  (whoseTurn == 1) ? 2 : 1;
+            JOptionPane.showMessageDialog(null, "end of the turn" );
+    
+    }
+        public int getWhoseTurn(){
+            return whoseTurn;
+        }
+
+
+
 }
+
