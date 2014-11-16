@@ -8,6 +8,7 @@ import java.util.List;
 
 /**
  * Created by Krzysiek on 2014-11-16.
+ * Helper class used to generate FCL input parameters.
  */
 public class FCLParameters {
     private int mineDicesCountInCurrentVertex;
@@ -18,13 +19,11 @@ public class FCLParameters {
     private double range3Possesion;
     private int mineOverallDicesCount;
     private int enemysOverallDicesCount;
-    private HashMap<String, Variable> hashMap;
     public FCLParameters(Vertex mineVertex,
                          Vertex enemysVertex,
                          ArrayList<Vertex> verticesAdjacentToMine,
                          ArrayList<Vertex> allVertices,
                          int playerNumber) {
-        hashMap = new HashMap<String, Variable>();
         mineDicesCountInCurrentVertex = mineVertex.getNrOfDices();
         enemysDicesCountInCurrentVertex = enemysVertex.getNrOfDices();
         mineOverallDicesCount = 0;
@@ -47,15 +46,6 @@ public class FCLParameters {
         range1Possesion = getPossesion(getAdjacentInRange(mineVertex, allVertices, 1), playerNumber);
         range2Possesion = getPossesion(getAdjacentInRange(mineVertex, allVertices, 2), playerNumber);
         range3Possesion = getPossesion(getAdjacentInRange(mineVertex, allVertices, 3), playerNumber);
-
-        hashMap.put("mineDicesCountInCurrentVertex", new VariableEx("mineDicesCountInCurrentVertex", mineDicesCountInCurrentVertex));
-        hashMap.put("enemysDicesCountInCurrentVertex", new VariableEx("enemysDicesCountInCurrentVertex", enemysDicesCountInCurrentVertex));
-        hashMap.put("overallPossesion", new VariableEx("overallPossesion", overallPossesion));
-        hashMap.put("range1Possesion", new VariableEx("range1Possesion", range1Possesion));
-        hashMap.put("range2Possesion", new VariableEx("range2Possesion", range2Possesion));
-        hashMap.put("range3Possesion", new VariableEx("range3Possesion", range3Possesion));
-        hashMap.put("mineOverallDicesCount", new VariableEx("mineOverallDicesCount", mineOverallDicesCount));
-        hashMap.put("enemysOverallDicesCount", new VariableEx("enemysOverallDicesCount", enemysOverallDicesCount));
     }
 
     public int getMineDicesCountInCurrentVertex() {
@@ -90,9 +80,6 @@ public class FCLParameters {
         return enemysOverallDicesCount;
     }
 
-    public HashMap<String, Variable> getHashMap() {
-        return hashMap;
-    }
 
     private ArrayList<Vertex> getAdjacentInRange(Vertex center, ArrayList<Vertex> allVertices, int range) {
         ArrayList<Vertex> result = new ArrayList<Vertex>();

@@ -2,6 +2,7 @@ package ai.dicewars.common;
 
 /**
  * Created by Krzysiek on 2014-11-11.
+ * Helper class used to create Answer objects more easily.
  */
 public class AnswerEx implements Answer {
 

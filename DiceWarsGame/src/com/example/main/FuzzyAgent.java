@@ -18,7 +18,7 @@ public class FuzzyAgent implements Agent {
     private final FIS fis;
     private final FunctionBlock functionBlock;
     private int playerNumber;
-        /*
+    /*
      * A default constructor which sets FCL file to "fuzzyPlayer.fcl".
      * In general, it shouldn't be used.
      */
@@ -140,7 +140,7 @@ public class FuzzyAgent implements Agent {
         this.playerNumber = number;
     }
 
-private enum FuzzyDecision {
+    private enum FuzzyDecision {
         Fight,
         DoNothing
     }
