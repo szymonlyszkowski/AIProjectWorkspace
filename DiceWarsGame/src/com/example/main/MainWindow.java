@@ -5,6 +5,12 @@ import javax.swing.*;
 import java.awt.*;
 
 public class MainWindow {
+    private static GraphCanvas canvas;
+
+    public GraphCanvas getCanvas() {
+        return canvas;
+    }
+
     public static void main(String[] args) {
         int gameType;
         
@@ -18,13 +24,14 @@ public class MainWindow {
         System.out.println("GRAPH CREATED");
         System.out.println(graph.toString());
 
+        canvas = new GraphCanvas(graph);
         
-        GameState gameState = new GameState(graph);
+        GameState gameState = new GameState(graph, canvas);
         gameState.initGame();
 
         frame.setSize(new Dimension(640, 480));
-        frame.setMinimumSize(new Dimension(640,480));
-        frame.getContentPane().add(new GraphCanvas(graph));
+        frame.setMinimumSize(new Dimension(640, 480));
+        frame.getContentPane().add(canvas);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.pack();

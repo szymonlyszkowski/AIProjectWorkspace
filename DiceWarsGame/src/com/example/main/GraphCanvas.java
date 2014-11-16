@@ -43,7 +43,7 @@ public class GraphCanvas extends Canvas implements MouseListener {
         this.uiEdges = new ArrayList<UIEdge>();
         this.activeVertex = null;
 
-        gameState = new GameState(graph);
+        gameState = new GameState(graph, this);
         //this.whoseTurn = 1;
         this.isPlayerVsPlayer = true;
 

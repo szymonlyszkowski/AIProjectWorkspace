@@ -1,6 +1,9 @@
 package com.example.main;
 
+import ai.dicewars.common.Agent;
 import ai.dicewars.common.Answer;
+
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
@@ -10,7 +13,7 @@ import javax.swing.JOptionPane;
  * Created by szymonlyszkowski on 30.10.14.
  */
 public class GameState {
-
+    private GraphCanvas canvas;
     private Graph graph;
     private ArrayList<Vertex> vertices;
     //private HashMap<Integer, Vertex> verticesHashMap;
@@ -19,10 +22,19 @@ public class GameState {
     private int whoseTurn;
     
     //create instances of agents 
-    AgentRandom player1 = new AgentRandom(1);
-    AgentRandom player2 = new AgentRandom(2);
+    Agent player1 = null;
+    Agent player2 = null;
 
-    public GameState(Graph graph) {
+    public GameState(Graph graph, GraphCanvas canvas) {
+        try {
+            player1 = new FuzzyAgent(1, "templateFuzzy.fcl");
+            player2 = new FuzzyAgent(2, "templateFuzzy.fcl");
+        } catch (FileNotFoundException e) {
+            System.err.println("Cannot find FCL player.");
+            System.exit(1);
+        }
+
+        this.canvas = canvas;
         this.graph = graph;
         this.vertices = this.graph.getGraphStructure();
       //  this.verticesHashMap = new HashMap<Integer, Vertex>();
@@ -72,6 +84,8 @@ public class GameState {
             System.out.println("won");
             result = true;
         }
+
+        this.canvas.repaint();
 
         return result;
     }
@@ -221,40 +235,41 @@ public class GameState {
                     }
                     doMove(vFrom, vTo);
                 }
+            }
 
-                if (getWhoseTurn() == 2) {
+            if (getWhoseTurn() == 2) {
 
-                    Answer ans2 = player2.makeMove(vertices);
+                Answer ans2 = player2.makeMove(vertices);
 
-                    if (ans2.isEmptyMove() == true) {
-                        endTurn();
+                if (ans2.isEmptyMove() == true) {
+                    endTurn();
 
-                    } else {
+                } else {
 
-                        int from = ans.getFrom();
-                        Vertex vFrom = null;
+                    int from = ans2.getFrom();
+                    Vertex vFrom = null;
 
-                        int to = ans.getTo();
-                        Vertex vTo = null;
+                    int to = ans2.getTo();
+                    Vertex vTo = null;
 
-                        for (Vertex vertf : vertices) {
+                    for (Vertex vertf : vertices) {
 
-                            if (vertf.getIndex() == from) {
-                                vFrom = vertf;
-                                break;
-                            }
+                        if (vertf.getIndex() == from) {
+                            vFrom = vertf;
+                            break;
                         }
-                        for (Vertex vertt : vertices) {
-
-                            if (vertt.getIndex() == to) {
-                                vTo = vertt;
-                                break;
-                            }
-                        }
-                        doMove(vFrom, vTo);
                     }
+                    for (Vertex vertt : vertices) {
+
+                        if (vertt.getIndex() == to) {
+                            vTo = vertt;
+                            break;
+                        }
+                    }
+                    doMove(vFrom, vTo);
                 }
             }
+
         }
     }
     
