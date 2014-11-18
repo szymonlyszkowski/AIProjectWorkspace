@@ -9,6 +9,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class MainWindow {
+    private static GraphCanvas canvas;
+
+    public GraphCanvas getCanvas() {
+        return canvas;
+    }
+
     public static void main(String[] args) {
         int gameType;
 
