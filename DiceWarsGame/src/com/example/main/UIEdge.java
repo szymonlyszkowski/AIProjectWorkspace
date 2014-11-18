@@ -17,16 +17,15 @@ public class UIEdge {
     public void paint(Graphics g) {
         Color edgeColor = determineEdgeColor();
         g.setColor(edgeColor);
-        int halfVertexSize = UIVertex.SIZE_VERTEX/2;
-        g.drawLine(this.firstVertex.getX()+halfVertexSize, this.firstVertex.getY()+halfVertexSize,
-                this.otherVertex.getX()+halfVertexSize, this.otherVertex.getY()+halfVertexSize);
+        int halfVertexSize = UIVertex.SIZE_VERTEX / 2;
+        g.drawLine(this.firstVertex.getX() + halfVertexSize, this.firstVertex.getY() + halfVertexSize,
+                this.otherVertex.getX() + halfVertexSize, this.otherVertex.getY() + halfVertexSize);
     }
 
     private Color determineEdgeColor() {
-        if(this.firstVertex.getBaseVertex().getPlayer() == this.otherVertex.getBaseVertex().getPlayer()) {
-            return this.firstVertex.getBaseVertex().getPlayer()%2 == 0 ? GraphCanvas.COLOR_PLAYER2 : GraphCanvas.COLOR_PLAYER1;
-        }
-        else {
+        if (this.firstVertex.getBaseVertex().getPlayer() == this.otherVertex.getBaseVertex().getPlayer()) {
+            return this.firstVertex.getBaseVertex().getPlayer() % 2 == 0 ? GraphCanvas.COLOR_PLAYER2 : GraphCanvas.COLOR_PLAYER1;
+        } else {
             return GraphCanvas.COLOR_PLAYER_BOTH;
         }
     }

@@ -23,19 +23,12 @@ public class GraphCanvas extends Canvas implements MouseListener {
     private ArrayList<UIVertex> uiVertexList;
     private UIVertex activeVertex;
     private Graph graph;
-    
-    
-    
-    
-
-    
-    
+    private Boolean isPlayerVsPlayer;
     private GameState gameState;
-    
+
     //private Boolean validMove;
 //    private int whoseTurn;
-    
-    private  Boolean isPlayerVsPlayer;
+
 
     public GraphCanvas(Graph graph) {
         this.graph = graph;
@@ -55,32 +48,32 @@ public class GraphCanvas extends Canvas implements MouseListener {
 
     private void initUIEdges() {
         ArrayList<Vertex> vertices = this.graph.getGraphStructure();
-        for(UIVertex singleUIVertex : this.uiVertices) {
+        for (UIVertex singleUIVertex : this.uiVertices) {
             Vertex baseVertex = singleUIVertex.getBaseVertex();
             ArrayList<Integer> adjacencyList = baseVertex.getAdjacencyList();
             // oh noes, that's a consequence of arraylist<int> ~_~
-            for(int singleId : adjacencyList) {
+            for (int singleId : adjacencyList) {
                 UIVertex adjacentUIVertex = vertices.get(singleId).getUiVertex();
                 this.uiEdges.add(new UIEdge(singleUIVertex, adjacentUIVertex));
             }
         }
     }
 
-    
+
     private void initUIVertices() {
         ArrayList<Vertex> vertices = this.graph.getGraphStructure();
         int verticesCount = vertices.size();
         int height = 400;
         int width = 640;
 
-        int circleRadius = (int)(height*0.4);
+        int circleRadius = (int) (height * 0.4);
         double theta = 0;
         int x = 0;
         int y = 0;
-        for(int i  = 0; i < verticesCount; i++) {
+        for (int i = 0; i < verticesCount; i++) {
             theta = (2 * Math.PI * i) / verticesCount;
-            x = (int)((width / 2) + (circleRadius * Math.cos(theta))-16);
-            y = (int)((height / 2) + (circleRadius * Math.sin(theta))-16);
+            x = (int) ((width / 2) + (circleRadius * Math.cos(theta)) - 16);
+            y = (int) ((height / 2) + (circleRadius * Math.sin(theta)) - 16);
             uiVertices.add(new UIVertex(vertices.get(i), x, y));
         }
     }
@@ -96,73 +89,70 @@ public class GraphCanvas extends Canvas implements MouseListener {
     @Override
     public void paint(Graphics g) {
         int vertexCount = this.uiVertices.size();
-        
-        
-        for(UIEdge singleEdge : this.uiEdges) {
+
+
+        for (UIEdge singleEdge : this.uiEdges) {
             singleEdge.paint(g);
         }
         for (UIVertex singleVertex : this.uiVertices) {
             singleVertex.paint(g);
         }
-        
+
         g.setColor(COLOR_FINISH_TURN);
         g.fillRect(10, 10, 85, 25);
         g.setColor(Color.BLACK);
-        g.drawString("NEXT TURN",15,27);
-        
+        g.drawString("NEXT TURN", 15, 27);
+
         //for test
         g.setColor(COLOR_FINISH_TURN);
         g.fillRect(10, 80, 85, 25);
         g.setColor(Color.BLACK);
-        g.drawString("PLAY!",15,100);
-        
-        
+        g.drawString("PLAY!", 15, 100);
+
+
         if (gameState.getWhoseTurn() == 1) {
-           
+
             g.setColor(COLOR_PLAYER1);
             g.fillRect(10, 45, 120, 25);
             g.setColor(Color.BLACK);
             g.drawString("Player 1 Turn", 15, 66);
         } else {
-            
+
             g.setColor(COLOR_PLAYER2);
             g.fillRect(10, 45, 120, 25);
             g.setColor(Color.BLACK);
             g.drawString("Player 2 Turn", 15, 66);
         }
-       
-        
+
+
     }
 
 
-    
-    
-    
     @Override
     public void mouseClicked(MouseEvent e) {
         int x = e.getX();
         int y = e.getY();
         // isButton ? refactor!
-        if ((x>10 && x<95) && (y>10 && y<35)) {
+        if ((x > 10 && x < 95) && (y > 10 && y < 35)) {
 
-                gameState.endTurn();
-                
+            gameState.endTurn();
+
         }
-        
-         if ((x>10 && x<95) && (y>80 && y<105)) {
-        	
-             // Game loop
-             // is
-             // here
-             gameState.gameLoop();
-          
-                
+
+        if ((x > 10 && x < 95) && (y > 80 && y < 105)) {
+
+            // Game loop
+            // is
+            // here
+            gameState.gameLoop();
+
+
         }
-        
+
         //Enable mouse events for the graph only in PvP mode 
         //
-        
-        if(isPlayerVsPlayer == true) {
+
+        if (isPlayerVsPlayer == true) {
             UIVertex clickedVertex = null;
             for (UIVertex singleVertex : this.uiVertices) {
                 if (singleVertex.isClicked(x, y)) {
@@ -192,11 +182,11 @@ public class GraphCanvas extends Canvas implements MouseListener {
                 activeVertex = null;
             }
         }
-        
+
         if (!gameState.gameEnds())
-        	this.repaint();
+            this.repaint();
         else
-        	JOptionPane.showMessageDialog(null, "The game is over!");
+            JOptionPane.showMessageDialog(null, "The game is over!");
     }
 
     @Override

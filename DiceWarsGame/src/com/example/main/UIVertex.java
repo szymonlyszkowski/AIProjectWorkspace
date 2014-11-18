@@ -52,27 +52,25 @@ public class UIVertex {
     }
 
     public void paint(Graphics g) {
-        if(active) {
+        if (active) {
             g.setColor(GraphCanvas.COLOR_PLAYER_ACTIVE);
-        }
-        else {
+        } else {
             g.setColor(this.baseVertex.getPlayer() % 2 == 0 ? GraphCanvas.COLOR_PLAYER2 : GraphCanvas.COLOR_PLAYER1);
         }
-        g.fillOval(this.x,this.y,SIZE_VERTEX,SIZE_VERTEX);
+        g.fillOval(this.x, this.y, SIZE_VERTEX, SIZE_VERTEX);
         g.setColor(Color.BLACK);
-        g.drawString(Integer.toString(this.baseVertex.getNrOfDices()), (int)(this.x+SIZE_VERTEX/2.5), (int)(this.y+SIZE_VERTEX/1.5));
-        
-        g.drawString(Integer.toString(this.baseVertex.getIndex()), (int)(this.x+16+SIZE_VERTEX/2.5), (int)(this.y+16+SIZE_VERTEX/1.5));
+        g.drawString(Integer.toString(this.baseVertex.getNrOfDices()), (int) (this.x + SIZE_VERTEX / 2.5), (int) (this.y + SIZE_VERTEX / 1.5));
+
+        g.drawString(Integer.toString(this.baseVertex.getIndex()), (int) (this.x + 16 + SIZE_VERTEX / 2.5), (int) (this.y + 16 + SIZE_VERTEX / 1.5));
     }
 
     public boolean isClicked(int clickX, int clickY) {
-        if(clickX >= this.x
-                && clickX <= this.x+SIZE_VERTEX
+        if (clickX >= this.x
+                && clickX <= this.x + SIZE_VERTEX
                 && clickY >= this.y
-                && clickY <= this.y+SIZE_VERTEX) {
+                && clickY <= this.y + SIZE_VERTEX) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
