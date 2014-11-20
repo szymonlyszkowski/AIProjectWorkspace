@@ -16,7 +16,6 @@ public class MainWindow {
     }
 
     public static void main(String[] args) {
-        int gameType;
 
         Graph graph;// = new Graph();
 
@@ -47,6 +46,8 @@ public class MainWindow {
 
                 break;
             }
+
+            //Launch the game
             case 2: {
 
 
@@ -58,7 +59,7 @@ public class MainWindow {
                 System.out.println(graph.toString());
 
 
-                GameState gameState = new GameState(graph);
+                GameState gameState =   new GameState(graph, canvas);
                 gameState.initGame();
 
                 frame.setSize(new Dimension(640, 480));
@@ -69,8 +70,6 @@ public class MainWindow {
                 frame.pack();
                 frame.setVisible(true);
 
-                //gameType = JOptionPane.showConfirmDialog(null,"Play AI vs AI?","Choose game type", JOptionPane.YES_NO_OPTION);
-                // System.out.println("mode " + gameType);
                 break;
             }
         }

@@ -26,9 +26,6 @@ public class GraphCanvas extends Canvas implements MouseListener {
     private Boolean isPlayerVsPlayer;
     private GameState gameState;
 
-    //private Boolean validMove;
-//    private int whoseTurn;
-
 
     public GraphCanvas(Graph graph) {
         this.graph = graph;
@@ -37,7 +34,7 @@ public class GraphCanvas extends Canvas implements MouseListener {
         this.activeVertex = null;
 
         gameState = new GameState(graph, this);
-        //this.whoseTurn = 1;
+
         this.isPlayerVsPlayer = true;
 
         initUIVertices();
