@@ -27,7 +27,6 @@ public class Vertex implements VertexBase {
         this.adjacencyList = new ArrayList<Integer>();
         this.hasChildren = false;
         this.player = new Random().nextInt(2);
-
     }
 
     public Vertex(int index) {
@@ -91,7 +90,6 @@ public class Vertex implements VertexBase {
     public int getNrOfAdjacentEdges() {
         return this.adjacencyList.size();
     }
-
 
     public ArrayList<Integer> getAdjacencyList() {
         return adjacencyList;

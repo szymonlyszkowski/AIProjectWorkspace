@@ -8,6 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="ai-dicewars-interface" level="project" />
+    <orderEntry type="module" module-name="DiceWarsGame" />
   </component>
 </module>
-
