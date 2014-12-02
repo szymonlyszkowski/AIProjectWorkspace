@@ -1,11 +1,26 @@
-AIProjectWorkspace
-==================
+###Odpalane z cmd: 
+Gra pozwala na uruchomienie w dwóch trybach (z poziomu AIProjectWorkspace\DiceWarsGame\out\production\DiceWarsGame). Pierwszy służy jedynie do tworzenia grafów i zapisania ich do pliku. Drugi do faktycznego uruchomienia gry na wczytanym grafie.
 
-Odpalane z cmd:
-(z poziomu AIProjectWorkspace\DiceWarsGame\out\production\DiceWarsGame)
+###Tryb 1. Tworzenie grafu
+```
+java -cp "<ścieżka gdzie jest jFuzzyLogic.jar i json-simple-1.1.1.jar>*"; com.example.main.MainWindow 1 nrOfVertices maxNrOfEdges ścieżkaDoWynikowegoPlikuZGrafem
+```
 
-java -cp "<ścieżka gdzie jest jFuzzyLogic.jar i json-simple-1.1.1.jar>\*"; com.example.main.MainWindow
+np.
+```
+cd C:\Moje Dokumenty\AIProjectWorkspace\DiceWarsGame\out\production\DiceWarsGame
+java -cp "../../../*"; com.Example.main.MainWindow 1 10 5 outputGraph.txt
+```
 
-parametry:
-(dla generowania mapy): 1 nrOfVertices maxNrOfEdges <ścieżka>outputfile (domyślnie tworzone w out/production/DiceWarsGame)
-(dla włączenia gry): 2 <ścieżka>inputfile
+###Tryb 2. Uruchamianie gry
+```
+java -cp "<ścieżka gdzie jest jFuzzyLogic.jar i json-simple-1.1.1.jar>*"; com.example.main.MainWindow 2 ścieżkaDoGrafuWygenerowanewgoWyżej
+```
+np.
+```
+cd C:\Moje Dokumenty\AIProjectWorkspace\DiceWarsGame\out\production\DiceWarsGame
+java -cp "../../../*"; com.Example.main.MainWindow 2 outputGraph.txt
+```
+
+TODO:
+To cudo powinno przyjmować jeszcze jako parametr typy agentów i ścieżkę do nich.
