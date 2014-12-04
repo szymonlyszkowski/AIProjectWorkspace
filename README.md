@@ -1,9 +1,16 @@
 ###Odpalane z cmd: 
 Gra pozwala na uruchomienie w dwóch trybach (z poziomu AIProjectWorkspace\DiceWarsGame\out\production\DiceWarsGame). Pierwszy służy jedynie do tworzenia grafów i zapisania ich do pliku. Drugi do faktycznego uruchomienia gry na wczytanym grafie.
 
+
+
 ###Tryb 1. Tworzenie grafu
 ```
 java -cp "<ścieżka gdzie jest jFuzzyLogic.jar i json-simple-1.1.1.jar>*"; com.example.main.MainWindow 1 nrOfVertices maxNrOfEdges ścieżkaDoWynikowegoPlikuZGrafem
+```
+P.S Jeżeli używacie linuxa to zamiast średnika jest dwukropek
+np.
+```
+java -cp "/home/szymonidas/repos/AIProject/DiceWarsGame/*": com.example.main.MainWindow 1 10 5 outputGraph.txt
 ```
 
 np.
