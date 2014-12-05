@@ -27,8 +27,9 @@ public class GameState {
 
     public GameState(Graph graph, GraphCanvas canvas) {
         try {
-            player1 = new FuzzyAgent(1, "templateFuzzy.fcl");
-            player2 = new FuzzyAgent(2, "templateFuzzy.fcl");
+            //player1 = new FuzzyAgent(1, "../../../templateFuzzy.fcl");
+            player1 = new FuzzyAgent(1, "../../../templateFuzzy.fcl");
+            player2 = new FuzzyAgent(2, "../../../templateFuzzy2.fcl");
         } catch (FileNotFoundException e) {
             System.err.println("Cannot find FCL player.");
             System.exit(1);
@@ -64,10 +65,10 @@ public class GameState {
 
         if (dicesAttacker <= dicesDefensive) {
             attacker.setNrOfDices(1);
-            JOptionPane.showMessageDialog(null,
+            /*JOptionPane.showMessageDialog(null,
                     "Player " + attacker.getPlayer() + " moves from " + attacker.getIndex() + " to " + defensive.getIndex() + "\n" +
                             dicesAttacker + " to " + dicesDefensive + "\n" +
-                            "Fight lost!");
+                            "Fight lost!");*/
 
             System.out.println("lost");
             result = false;
@@ -75,9 +76,9 @@ public class GameState {
             defensive.setNrOfDices(attacker.getNrOfDices() - 1);
             attacker.setNrOfDices(1);
             defensive.setPlayer(attacker.getPlayer());
-            JOptionPane.showMessageDialog(null,
+            /*JOptionPane.showMessageDialog(null,
                     "Player " + attacker.getPlayer() + " moves from " + attacker.getIndex() + " to " + defensive.getIndex() + "\n" +
-                            dicesAttacker + " to " + dicesDefensive + "\n" + "Fight won!");
+                            dicesAttacker + " to " + dicesDefensive + "\n" + "Fight won!");*/
             System.out.println("won");
             result = true;
         }
@@ -98,12 +99,17 @@ public class GameState {
                     mostAdjacentEdges = vertex.getNrOfAdjacentEdges();
             }
         }
-        System.out.println(mostAdjacentEdges);
+        System.out.println(player);
         //adding new dices
         Random rand = new Random();
         for (Vertex vertex : vertices) {
             if (vertex.getPlayer() == player) {
                 int newDices = rand.nextInt(mostAdjacentEdges);
+                if ((vertex.getNrOfDices() + newDices) > 8) {
+                    mostAdjacentEdges += (vertex.getNrOfDices()+newDices-8);
+                    vertex.setNrOfDices(8);
+                }
+
                 vertex.setNrOfDices(vertex.getNrOfDices() + newDices);
                 mostAdjacentEdges -= newDices;
             }
@@ -287,7 +293,7 @@ public class GameState {
     public void endTurn() {
         addDicesToFields(whoseTurn);
         whoseTurn = (whoseTurn == 1) ? 2 : 1;
-        JOptionPane.showMessageDialog(null, "end of the turn");
+        /*JOptionPane.showMessageDialog(null, "end of the turn");*/
 
     }
 

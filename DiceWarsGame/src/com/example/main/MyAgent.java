@@ -1,30 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.example.main;
 
 import ai.dicewars.common.Agent;
 import ai.dicewars.common.Answer;
-import ai.dicewars.common.VertexBase;
+import ai.dicewars.common.AnswerEx;
+import net.sourceforge.jFuzzyLogic.rule.Variable;
+
 import java.util.ArrayList;
 import java.util.List;
+
 
 /**
  *
  * @author Czyzewscy
  */
-public class AgentRandom implements Agent{
+public class MyAgent implements Agent{
 
     private Graph graph;
     private ArrayList<Vertex> vertices;
     private int playerNumber;
+    private static int doNothingRounded = 0;
 
 
-
-
-    public AgentRandom (int n){
+    public MyAgent (int n){
         this.playerNumber = n;
         this.graph = graph;
         this.vertices = new ArrayList<Vertex>();
@@ -33,8 +30,7 @@ public class AgentRandom implements Agent{
     }
 
     @Override
-    public Answer makeMove(ArrayList<Vertex> list) {
-
+    public Answer makeMove(ArrayList<Vertex> vertices) {
         return new Answer() {
 
 
@@ -60,9 +56,6 @@ public class AgentRandom implements Agent{
     @Override
     public void setPlayerNumber(int i) {
         this.playerNumber = i;
-
     }
-
-
 
 }
