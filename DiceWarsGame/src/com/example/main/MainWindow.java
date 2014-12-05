@@ -61,6 +61,29 @@ public class MainWindow {
                 System.out.println(graph.toString());
 
 
+                GameState gameState =   new GameState(graph, canvas);
+                gameState.initGame();
+
+                frame.setSize(new Dimension(640, 480));
+                frame.setMinimumSize(new Dimension(640, 480));
+                frame.getContentPane().add(new GraphCanvas(graph));
+                frame.setLocationRelativeTo(null);
+                frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
+
+                break;
+            }
+
+            case 3:{
+                JFrame frame = new JFrame("GraphCanvas");
+
+                graph = converter.parseJSONToGraph(args[1]);
+
+                System.out.println("GRAPH CREATED");
+                System.out.println(graph.toString());
+
+
                 GameState gameState =   new GameState(graph, canvas,args[2],args[3]);
                 gameState.initGame();
 
@@ -73,6 +96,8 @@ public class MainWindow {
                 frame.setVisible(true);
 
                 break;
+
+
             }
         }
     }
