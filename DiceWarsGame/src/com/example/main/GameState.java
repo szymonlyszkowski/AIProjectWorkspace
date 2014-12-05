@@ -27,8 +27,8 @@ public class GameState {
 
     public GameState(Graph graph, GraphCanvas canvas) {
         try {
-            player1 = new FuzzyAgent(1, "templateFuzzy.fcl");
-            player2 = new FuzzyAgent(2, "templateFuzzy.fcl");
+            player1 = new FuzzyAgent(1, "F:\\STUDIA\\AI\\filipFuzzy.fcl");
+            player2 = new graphAgentFilip(2);//FuzzyAgent(2, "templateFuzzy.fcl");
         } catch (FileNotFoundException e) {
             System.err.println("Cannot find FCL player.");
             System.exit(1);
@@ -64,21 +64,21 @@ public class GameState {
 
         if (dicesAttacker <= dicesDefensive) {
             attacker.setNrOfDices(1);
-            JOptionPane.showMessageDialog(null,
+           /* JOptionPane.showMessageDialog(null,
                     "Player " + attacker.getPlayer() + " moves from " + attacker.getIndex() + " to " + defensive.getIndex() + "\n" +
                             dicesAttacker + " to " + dicesDefensive + "\n" +
                             "Fight lost!");
-
+*/
             System.out.println("lost");
             result = false;
         } else {
             defensive.setNrOfDices(attacker.getNrOfDices() - 1);
             attacker.setNrOfDices(1);
             defensive.setPlayer(attacker.getPlayer());
-            JOptionPane.showMessageDialog(null,
+     /*       JOptionPane.showMessageDialog(null,
                     "Player " + attacker.getPlayer() + " moves from " + attacker.getIndex() + " to " + defensive.getIndex() + "\n" +
                             dicesAttacker + " to " + dicesDefensive + "\n" + "Fight won!");
-            System.out.println("won");
+       */     System.out.println("won");
             result = true;
         }
 
@@ -287,7 +287,7 @@ public class GameState {
     public void endTurn() {
         addDicesToFields(whoseTurn);
         whoseTurn = (whoseTurn == 1) ? 2 : 1;
-        JOptionPane.showMessageDialog(null, "end of the turn");
+    //    JOptionPane.showMessageDialog(null, "end of the turn");
 
     }
 
