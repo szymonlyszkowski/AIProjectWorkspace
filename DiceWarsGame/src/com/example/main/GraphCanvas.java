@@ -1,12 +1,11 @@
 package com.example.main;
 
 import javax.swing.*;
-
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.net.MalformedURLException;
 import java.util.ArrayList;
-import java.util.Collections;
 
 /**
  * Created by Krzysiek on 2014-10-26.
@@ -27,7 +26,7 @@ public class GraphCanvas extends Canvas implements MouseListener {
     private GameState gameState;
 
 
-    public GraphCanvas(Graph graph) {
+    public GraphCanvas(Graph graph) throws MalformedURLException {
         this.graph = graph;
         this.uiVertices = new ArrayList<UIVertex>();
         this.uiEdges = new ArrayList<UIEdge>();

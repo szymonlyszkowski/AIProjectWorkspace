@@ -29,5 +29,19 @@ cd C:\Moje Dokumenty\AIProjectWorkspace\DiceWarsGame\out\production\DiceWarsGame
 java -cp "../../../*"; com.Example.main.MainWindow 2 outputGraph.txt
 ```
 
-TODO:
-To cudo powinno przyjmować jeszcze jako parametr typy agentów i ścieżkę do nich.
+###Tryb 3. Agenci
+```
+java -cp "<ścieżka gdzie jest jFuzzyLogic.jar i json-simple-1.1.1.jar>*"; com.example.main.MainWindow 3 ścieżkaDoGrafuWygenerowanewgoWyżej agent1Directory.jar agent2Directory.jar
+```
+
+Generalnie moim zdaniem program powinien przyjmować 2 jarki. Kazda klasa ktora zaimplementuje interfejs Agent powinna byc odczytana.
+Jest tylko problem z odpowiednim spakowaniem tych plikow do jar bo wieksze klasy kompiluja sie do kilku plikow class z ktorych tworzy się jar'a.... komenda to stworzenia jar:
+```
+jar cvf result.jar /source/to/.class/file(s)
+```
+np.
+```
+cd ~repos/AIProject/DiceWarsGame/out/production/DiceWarsGame/
+jar cvf result.jar /ai/dicewars/common/Agent.class
+```
+
