@@ -5,8 +5,10 @@ import org.json.simple.JSONObject;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.MalformedURLException;
 
 public class MainWindow {
     private static GraphCanvas canvas;
@@ -15,11 +17,11 @@ public class MainWindow {
         return canvas;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-        Graph graph;// = new Graph();
+        Graph graph;
 
-        JSONConverter conv = new JSONConverter();
+        JSONConverter converter = new JSONConverter();
 
         int choice = Integer.parseInt(args[0]);
 
@@ -34,7 +36,7 @@ public class MainWindow {
                     graph.generateGraph();
                 }
 
-                JSONObject jsonGraph = conv.parseGraphToJSON(graph);
+                JSONObject jsonGraph = converter.parseGraphToJSON(graph);
 
                 try {
                     FileWriter file = new FileWriter(args[3]);
@@ -53,13 +55,13 @@ public class MainWindow {
 
                 JFrame frame = new JFrame("GraphCanvas");
 
-                graph = conv.parseJSONToGraph(args[1]);
+                graph = converter.parseJSONToGraph(args[1]);
 
                 System.out.println("GRAPH CREATED");
                 System.out.println(graph.toString());
 
 
-                GameState gameState =   new GameState(graph, canvas);
+                GameState gameState =   new GameState(graph, canvas,args[2],args[3]);
                 gameState.initGame();
 
                 frame.setSize(new Dimension(640, 480));

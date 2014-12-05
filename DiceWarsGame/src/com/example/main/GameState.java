@@ -2,12 +2,14 @@ package com.example.main;
 
 import ai.dicewars.common.Agent;
 import ai.dicewars.common.Answer;
+import ai.dicewars.fuzzy.FuzzyAgent;
 
+import javax.swing.*;
 import java.io.FileNotFoundException;
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
-import javax.swing.JOptionPane;
 
 /**
  * Created by szymonlyszkowski on 30.10.14.
@@ -25,7 +27,7 @@ public class GameState {
     Agent player1 = null;
     Agent player2 = null;
 
-    public GameState(Graph graph, GraphCanvas canvas) {
+    public GameState(Graph graph, GraphCanvas canvas) throws MalformedURLException {
         try {
             player1 = new FuzzyAgent(1, "templateFuzzy.fcl");
             player2 = new FuzzyAgent(2, "templateFuzzy.fcl");
@@ -39,6 +41,17 @@ public class GameState {
         this.vertices = this.graph.getGraphStructure();
         this.whoseTurn = 1;
     }
+
+    public GameState(Graph graph, GraphCanvas canvas, String player1Path, String player2Path) throws Exception {
+        player1 = new JarLoader().loadAgent(player1Path);
+        player2 = new JarLoader().loadAgent(player2Path);
+
+        this.canvas = canvas;
+        this.graph = graph;
+        this.vertices = this.graph.getGraphStructure();
+        this.whoseTurn = 1;
+    }
+
 
     public void initGame() {
         assignPlayersToVertices(this.vertices);
