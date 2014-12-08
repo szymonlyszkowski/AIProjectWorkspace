@@ -1,5 +1,6 @@
 package com.example.main;
 
+import ai.dicewars.clips.CLIPSAgent;
 import ai.dicewars.common.Agent;
 import ai.dicewars.common.Answer;
 import ai.dicewars.fuzzy.FuzzyAgent;
@@ -30,7 +31,8 @@ public class GameState {
     public GameState(Graph graph, GraphCanvas canvas) throws MalformedURLException {
         try {
             //player1 = new FuzzyAgent(1, "../../../templateFuzzy.fcl");
-            player1 = new FuzzyAgent(1, "../../../templateFuzzy.fcl");
+            //player1 = new MyAgent(1);
+            player1 = new CLIPSAgent(1, "../../../clipsAgent.clp");
             player2 = new FuzzyAgent(2, "../../../templateFuzzy2.fcl");
         } catch (FileNotFoundException e) {
             System.err.println("Cannot find FCL player.");
