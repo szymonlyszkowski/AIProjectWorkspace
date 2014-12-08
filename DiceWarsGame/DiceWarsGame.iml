@@ -21,5 +21,9 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="jFuzzyLogic" level="project" />
+    <orderEntry type="library" name="json-simple-1.1.1" level="project" />
+    <orderEntry type="library" name="CLIPSJNI" level="project" />
   </component>
 </module>
+

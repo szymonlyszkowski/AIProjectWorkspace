@@ -30,12 +30,11 @@ public class GameState {
     Agent player1 = null;
     Agent player2 = null;
 
+    //Used in mode 2
     public GameState(Graph graph, GraphCanvas canvas, int mode) throws MalformedURLException {
         try {
-            //player1 = new FuzzyAgent(1, "../../../templateFuzzy.fcl");
-            //player1 = new MyAgent(1);
-            player1 = new CLIPSAgent(1, "../../../clipsAgent.clp");
-            player2 = new FuzzyAgent(2, "../../../templateFuzzy2.fcl");
+            player1 = new FuzzyAgent(1, "templateFuzzy.fcl");
+            player2 = new FuzzyAgent(2, "templateFuzzy.fcl");
         } catch (FileNotFoundException e) {
             System.err.println("Cannot find FCL player.");
             System.exit(1);
@@ -48,14 +47,19 @@ public class GameState {
         this.mode = mode;
     }
 
-    public GameState(Graph graph, GraphCanvas canvas, String player1Path, String player2Path) throws Exception {
+    //Used in modes 3 and 4
+    public GameState(Graph graph, GraphCanvas canvas, int mode, String player1Path, String player2Path) throws Exception {
         player1 = new JarLoader().loadAgent(player1Path);
         player2 = new JarLoader().loadAgent(player2Path);
+
+        player1.setPlayerNumber(1);
+        player2.setPlayerNumber(2);
 
         this.canvas = canvas;
         this.graph = graph;
         this.vertices = this.graph.getGraphStructure();
         this.whoseTurn = 1;
+        this.mode = mode;
     }
 
 
@@ -99,7 +103,7 @@ public class GameState {
             if(mode != 4) {
             JOptionPane.showMessageDialog(null,
                     "Player " + attacker.getPlayer() + " moves from " + attacker.getIndex() + " to " + defensive.getIndex() + "\n" +
-                            dicesAttacker + " to " + dicesDefensive + "\n" + "Fight won!");*/
+                            dicesAttacker + " to " + dicesDefensive + "\n" + "Fight won!");
 
             }
             //System.out.println("won");
@@ -122,7 +126,7 @@ public class GameState {
                     mostAdjacentEdges = vertex.getNrOfAdjacentEdges();
             }
         }
-        System.out.println(player);
+        //System.out.println(player);
         //adding new dices
         Random rand = new Random();
         for (Vertex vertex : vertices) {
