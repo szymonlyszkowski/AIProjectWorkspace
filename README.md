@@ -45,3 +45,12 @@ cd ~repos/AIProject/DiceWarsGame/out/production/DiceWarsGame/
 jar cvf result.jar /ai/dicewars/common/Agent.class
 ```
 
+###Odpalanie z agentem w CLIPSie
+```
+java -cp "<ścieżka gdzie jest jFuzzyLogic.jar i json-simple-1.1.1.jar>*"; -Djava.library.path=../../.. com.example.main.MainWindow [OPCJE JAK WCZEŚNIEJ]
+```
+Żeby odpalić bibliotekę CLIPSową poza wczytaniem JARa do projektu trzeba jeszcze ręcznie wskazać mu ścieżkę do pliku dll.
+np.
+```
+java -cp "../../../*"; -Djava.library.path=../../.. com.example.main.MainWindow 2 map1.txt
+```

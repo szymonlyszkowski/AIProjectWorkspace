@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="DiceWarsGame">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/DiceWarsGame/json-simple-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DiceWarsGame/jFuzzyLogic.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DiceWarsGame/CLIPSJNI.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
