@@ -17,8 +17,9 @@ public class JarLoader {
         JclObjectFactory factory = JclObjectFactory.getInstance();
 
         //Create object of loaded class
-        Object obj = factory.create(jcl, "ai.common.Agent");
+        Object obj = factory.create(jcl, /*"ai.dicewars.common.Agent"*/"com.example.main.MyAgent");
 
         return JclUtils.cast(obj, Agent.class);
+
     }
 }

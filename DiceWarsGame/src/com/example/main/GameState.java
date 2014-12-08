@@ -23,11 +23,13 @@ public class GameState {
     private Boolean validMove;
     private int whoseTurn;
 
+    private int mode;
+
     //create instances of agents 
     Agent player1 = null;
     Agent player2 = null;
 
-    public GameState(Graph graph, GraphCanvas canvas) throws MalformedURLException {
+    public GameState(Graph graph, GraphCanvas canvas, int mode) throws MalformedURLException {
         try {
             player1 = new FuzzyAgent(1, "F:\\STUDIA\\AI\\filipFuzzy.fcl");
             player2 = new graphAgentFilip(2);//FuzzyAgent(2, "templateFuzzy.fcl");
@@ -40,6 +42,7 @@ public class GameState {
         this.graph = graph;
         this.vertices = this.graph.getGraphStructure();
         this.whoseTurn = 1;
+        this.mode = mode;
     }
 
     public GameState(Graph graph, GraphCanvas canvas, String player1Path, String player2Path) throws Exception {
@@ -77,21 +80,26 @@ public class GameState {
 
         if (dicesAttacker <= dicesDefensive) {
             attacker.setNrOfDices(1);
-           /* JOptionPane.showMessageDialog(null,
-                    "Player " + attacker.getPlayer() + " moves from " + attacker.getIndex() + " to " + defensive.getIndex() + "\n" +
-                            dicesAttacker + " to " + dicesDefensive + "\n" +
-                            "Fight lost!");
-*/
-            System.out.println("lost");
+            if (mode != 4){
+                JOptionPane.showMessageDialog(null,
+                        "Player " + attacker.getPlayer() + " moves from " + attacker.getIndex() + " to " + defensive.getIndex() + "\n" +
+                                dicesAttacker + " to " + dicesDefensive + "\n" +
+                                "Fight lost!");
+            }
+           //System.out.println("lost");
             result = false;
         } else {
             defensive.setNrOfDices(attacker.getNrOfDices() - 1);
             attacker.setNrOfDices(1);
             defensive.setPlayer(attacker.getPlayer());
-     /*       JOptionPane.showMessageDialog(null,
+
+            if(mode != 4) {
+            JOptionPane.showMessageDialog(null,
                     "Player " + attacker.getPlayer() + " moves from " + attacker.getIndex() + " to " + defensive.getIndex() + "\n" +
                             dicesAttacker + " to " + dicesDefensive + "\n" + "Fight won!");
-       */     System.out.println("won");
+
+            }
+            //System.out.println("won");
             result = true;
         }
 
@@ -111,7 +119,7 @@ public class GameState {
                     mostAdjacentEdges = vertex.getNrOfAdjacentEdges();
             }
         }
-        System.out.println(mostAdjacentEdges);
+        //System.out.println(mostAdjacentEdges);
         //adding new dices
         Random rand = new Random();
         for (Vertex vertex : vertices) {
@@ -145,6 +153,12 @@ public class GameState {
         }
         if (player1 == 0 || player2 == 0) {
             end = true;
+            if(vertices.get(0).getPlayer() == 1){
+                System.out.print("Winner: player1");
+            }
+            else{
+                System.out.print("Winner: player2");
+            }
         }
         return end;
     }
@@ -210,7 +224,7 @@ public class GameState {
 
     //edit by Marcin
     public void gameLoop() {
-        System.out.println("The game is rolling");
+        //System.out.println("The game is rolling");
         while (gameEnds() == false) {
 
             if (getWhoseTurn() == 1) {
@@ -300,7 +314,7 @@ public class GameState {
     public void endTurn() {
         addDicesToFields(whoseTurn);
         whoseTurn = (whoseTurn == 1) ? 2 : 1;
-    //    JOptionPane.showMessageDialog(null, "end of the turn");
+        //JOptionPane.showMessageDialog(null, "end of the turn");
 
     }
 

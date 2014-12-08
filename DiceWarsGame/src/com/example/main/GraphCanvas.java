@@ -23,16 +23,18 @@ public class GraphCanvas extends Canvas implements MouseListener {
     private UIVertex activeVertex;
     private Graph graph;
     private Boolean isPlayerVsPlayer;
+
+
     private GameState gameState;
 
 
-    public GraphCanvas(Graph graph) throws MalformedURLException {
+    public GraphCanvas(Graph graph, int mode) throws MalformedURLException {
         this.graph = graph;
         this.uiVertices = new ArrayList<UIVertex>();
         this.uiEdges = new ArrayList<UIEdge>();
         this.activeVertex = null;
 
-        gameState = new GameState(graph, this);
+        gameState = new GameState(graph, this, mode);
 
         this.isPlayerVsPlayer = true;
 
@@ -40,6 +42,10 @@ public class GraphCanvas extends Canvas implements MouseListener {
         initUIEdges();
 
         this.addMouseListener(this);
+    }
+
+    public GameState getGameState() {
+        return gameState;
     }
 
     private void initUIEdges() {

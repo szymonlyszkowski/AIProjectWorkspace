@@ -27,6 +27,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="jcl-core-2.6-SNAPSHOT-javadoc" level="project" />
   </component>
 </module>
 
