@@ -1,5 +1,6 @@
 package com.example.main;
 
+import ai.dicewars.clips.CLIPSAgent;
 import ai.dicewars.common.Agent;
 import ai.dicewars.common.Answer;
 import ai.dicewars.fuzzy.FuzzyAgent;
@@ -31,8 +32,10 @@ public class GameState {
 
     public GameState(Graph graph, GraphCanvas canvas, int mode) throws MalformedURLException {
         try {
-            player1 = new FuzzyAgent(1, "F:\\STUDIA\\AI\\filipFuzzy.fcl");
-            player2 = new graphAgentFilip(2);//FuzzyAgent(2, "templateFuzzy.fcl");
+            //player1 = new FuzzyAgent(1, "../../../templateFuzzy.fcl");
+            //player1 = new MyAgent(1);
+            player1 = new CLIPSAgent(1, "../../../clipsAgent.clp");
+            player2 = new FuzzyAgent(2, "../../../templateFuzzy2.fcl");
         } catch (FileNotFoundException e) {
             System.err.println("Cannot find FCL player.");
             System.exit(1);
@@ -96,7 +99,7 @@ public class GameState {
             if(mode != 4) {
             JOptionPane.showMessageDialog(null,
                     "Player " + attacker.getPlayer() + " moves from " + attacker.getIndex() + " to " + defensive.getIndex() + "\n" +
-                            dicesAttacker + " to " + dicesDefensive + "\n" + "Fight won!");
+                            dicesAttacker + " to " + dicesDefensive + "\n" + "Fight won!");*/
 
             }
             //System.out.println("won");
@@ -119,12 +122,17 @@ public class GameState {
                     mostAdjacentEdges = vertex.getNrOfAdjacentEdges();
             }
         }
-        //System.out.println(mostAdjacentEdges);
+        System.out.println(player);
         //adding new dices
         Random rand = new Random();
         for (Vertex vertex : vertices) {
             if (vertex.getPlayer() == player) {
                 int newDices = rand.nextInt(mostAdjacentEdges);
+                if ((vertex.getNrOfDices() + newDices) > 8) {
+                    mostAdjacentEdges += (vertex.getNrOfDices()+newDices-8);
+                    vertex.setNrOfDices(8);
+                }
+
                 vertex.setNrOfDices(vertex.getNrOfDices() + newDices);
                 mostAdjacentEdges -= newDices;
             }
@@ -224,6 +232,7 @@ public class GameState {
 
     //edit by Marcin
     public void gameLoop() {
+   
         //System.out.println("The game is rolling");
         while (gameEnds() == false) {
 
@@ -314,6 +323,7 @@ public class GameState {
     public void endTurn() {
         addDicesToFields(whoseTurn);
         whoseTurn = (whoseTurn == 1) ? 2 : 1;
+    
         //JOptionPane.showMessageDialog(null, "end of the turn");
 
     }

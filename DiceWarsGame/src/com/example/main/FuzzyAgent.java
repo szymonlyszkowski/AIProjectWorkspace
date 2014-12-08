@@ -23,7 +23,7 @@ public class FuzzyAgent implements Agent {
      * In general, it shouldn't be used.
      */
     public FuzzyAgent(int playerNumber) throws FileNotFoundException {
-        this(playerNumber, "fuzzyPlayer.fcl");
+        this(playerNumber, "templateFuzzy.fcl");
     };
 
     public FuzzyAgent(int playerNumber, String filename) throws FileNotFoundException {
