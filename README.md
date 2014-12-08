@@ -34,8 +34,12 @@ java -cp "../../../*"; com.Example.main.MainWindow 2 outputGraph.txt
 java -cp "<ścieżka gdzie jest jFuzzyLogic.jar i json-simple-1.1.1.jar>*"; com.example.main.MainWindow 3 ścieżkaDoGrafuWygenerowanewgoWyżej agent1Directory.jar agent2Directory.jar
 ```
 
-Generalnie moim zdaniem program powinien przyjmować 2 jarki. Kazda klasa ktora zaimplementuje interfejs Agent powinna byc odczytana.
-Jest tylko problem z odpowiednim spakowaniem tych plikow do jar bo wieksze klasy kompiluja sie do kilku plikow class z ktorych tworzy się jar'a.... komenda to stworzenia jar:
+Program przyjmuje 2 jarki. Klasa z agentem, którą wrzucamy do jara musi nazywać się MyAgent (niezależnie od typu agenta) i implementować interfejs Agent. 
+Jeżeli dany agent ma w strukturze jakieś klasy lokalne, to je też musimy dołączyć do jara. Najprowdopodobniej klasy powinny znajdować się w jarze uwzględniając podfoldery (np. com/example/main).
+
+Dodatkowo klasa agenta musi posiadać bezparametrowy default constructor. W przypadku FuzzyAgent, plik .fcl może znajdować się poza jarem (tylko trzeba w klasie podać właściwą ścieżkę do pliku; jak damy samą nazwę pliku, to ów plik powinien sie znajdować w out/production/DiceWarsGame)
+
+Komenda to stworzenia jar:
 ```
 jar cvf result.jar /source/to/.class/file(s)
 ```
