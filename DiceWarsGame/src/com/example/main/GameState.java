@@ -33,8 +33,8 @@ public class GameState {
     //Used in mode 2
     public GameState(Graph graph, GraphCanvas canvas, int mode) throws MalformedURLException {
         try {
-            player1 = new FuzzyAgent(1, "templateFuzzy.fcl");
-            player2 = new FuzzyAgent(2, "templateFuzzy.fcl");
+            player1 = new CLIPSAgent(1, "../../../clipsAgent.clp");
+            player2 = new FuzzyAgent(2, "../../../templateFuzzy.fcl");
         } catch (FileNotFoundException e) {
             System.err.println("Cannot find FCL player.");
             System.exit(1);
