@@ -39,6 +39,8 @@ Jeżeli dany agent ma w strukturze jakieś klasy lokalne, to je też musimy doł
 
 Dodatkowo klasa agenta musi posiadać bezparametrowy default constructor. W przypadku FuzzyAgent, plik .fcl może znajdować się poza jarem (tylko trzeba w klasie podać właściwą ścieżkę do pliku; jak damy samą nazwę pliku, to ów plik powinien sie znajdować w out/production/DiceWarsGame)
 
+W przypadku agentów fuzzy i clips, w klasach (które znajdą się w jarze) powinien być kontruktor bez parametrów, który ma zakodowaną ścieżkę do pliku .fcl lub .clp.
+
 Komenda to stworzenia jar:
 ```
 jar cvf result.jar /source/to/.class/file(s)

@@ -93,7 +93,7 @@ public class GameState {
 //                                dicesAttacker + " to " + dicesDefensive + "\n" +
 //                                "Fight lost!");
             }
-           //System.out.println("lost");
+            //System.out.println("lost");
             result = false;
         } else {
             defensive.setNrOfDices(attacker.getNrOfDices() - 1);
@@ -109,7 +109,7 @@ public class GameState {
             result = true;
         }
 
-         this.canvas.repaint();
+        this.canvas.repaint();
 
         return result;
     }
@@ -235,7 +235,7 @@ public class GameState {
 
     //edit by Marcin
     public void gameLoop() {
-   
+
         //System.out.println("The game is rolling");
         while (gameEnds() == false) {
 
@@ -270,38 +270,38 @@ public class GameState {
                     doMove(vFrom, vTo);
                 }
             }
-                if (getWhoseTurn() == 2) {
+            if (getWhoseTurn() == 2) {
 
-                    Answer ans2 = player2.makeMove(vertices);
+                Answer ans2 = player2.makeMove(vertices);
 
-                    if (ans2.isEmptyMove() == true) {
-                        endTurn();
+                if (ans2.isEmptyMove() == true) {
+                    endTurn();
 
-                    } else {
+                } else {
 
-                        int from = ans2.getFrom();
-                        Vertex vFrom = null;
+                    int from = ans2.getFrom();
+                    Vertex vFrom = null;
 
-                        int to = ans2.getTo();
-                        Vertex vTo = null;
+                    int to = ans2.getTo();
+                    Vertex vTo = null;
 
-                        for (Vertex vertf : vertices) {
+                    for (Vertex vertf : vertices) {
 
-                            if (vertf.getIndex() == from) {
-                                vFrom = vertf;
-                                break;
-                            }
+                        if (vertf.getIndex() == from) {
+                            vFrom = vertf;
+                            break;
                         }
-                        for (Vertex vertt : vertices) {
-
-                            if (vertt.getIndex() == to) {
-                                vTo = vertt;
-                                break;
-                            }
-                        }
-                        doMove(vFrom, vTo);
                     }
+                    for (Vertex vertt : vertices) {
+
+                        if (vertt.getIndex() == to) {
+                            vTo = vertt;
+                            break;
+                        }
+                    }
+                    doMove(vFrom, vTo);
                 }
+            }
         }
     }
 
@@ -326,7 +326,7 @@ public class GameState {
     public void endTurn() {
         addDicesToFields(whoseTurn);
         whoseTurn = (whoseTurn == 1) ? 2 : 1;
-    
+
         //JOptionPane.showMessageDialog(null, "end of the turn");
 
     }
