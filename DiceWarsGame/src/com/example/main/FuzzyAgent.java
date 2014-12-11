@@ -22,6 +22,8 @@ public class FuzzyAgent implements Agent {
      * A default constructor which sets FCL file to "fuzzyPlayer.fcl".
      * In general, it shouldn't be used.
      */
+
+
     public FuzzyAgent(int playerNumber) throws FileNotFoundException {
         this(playerNumber, "templateFuzzy.fcl");
     };

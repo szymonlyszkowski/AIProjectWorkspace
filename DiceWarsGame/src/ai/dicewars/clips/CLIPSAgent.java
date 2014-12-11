@@ -52,7 +52,9 @@ public class CLIPSAgent implements Agent {
             // iterate through all of my vertices
             Vertex currentVertex = vertices.get(i);
             if(isVertexMine(currentVertex)) {
-
+                if (currentVertex.getNrOfDices() < 2) {
+                    continue;
+                }
                 //fetch adjacent ones
                 ArrayList<Vertex> adjacentVertices = getAdjacentVertices(currentVertex, vertices);
 
