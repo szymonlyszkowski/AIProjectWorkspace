@@ -2,457 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cb32883-ecd1-4184-addb-88374bb604b9" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\CLIPSJNI.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\CLIPSJNI.iml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\CLIPSJNI.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AnimalDemo\AnimalDemo$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AnimalDemo\AnimalDemo$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AnimalDemo\AnimalDemo$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AnimalDemo\AnimalDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AnimalDemo\AnimalDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AnimalDemo\animaldemo.clp" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AnimalDemo\bcdemo.clp" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AnimalDemo\resources\AnimalResources.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AnimalDemo\resources\AnimalResources_ar.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AnimalDemo\resources\AnimalResources_ar.source" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AnimalDemo\resources\AnimalResources_es.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AnimalDemo\resources\AnimalResources_es.source" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AnimalDemo\resources\AnimalResources_ja.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AnimalDemo\resources\AnimalResources_ja.source" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AnimalDemo\resources\AnimalResources_ru.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AnimalDemo\resources\AnimalResources_ru.source" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AutoDemo\AutoDemo$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AutoDemo\AutoDemo$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AutoDemo\AutoDemo$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AutoDemo\AutoDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AutoDemo\AutoDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AutoDemo\autodemo.clp" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AutoDemo\resources\AutoResources.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AutoDemo\resources\AutoResources_ar.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AutoDemo\resources\AutoResources_ar.source" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AutoDemo\resources\AutoResources_es.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AutoDemo\resources\AutoResources_es.source" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AutoDemo\resources\AutoResources_ja.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AutoDemo\resources\AutoResources_ja.source" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AutoDemo\resources\AutoResources_ru.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\AutoDemo\resources\AutoResources_ru.source" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\SudokuDemo\SudokuDemo$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\SudokuDemo\SudokuDemo$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\SudokuDemo\SudokuDemo$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\SudokuDemo\SudokuDemo$4$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\SudokuDemo\SudokuDemo$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\SudokuDemo\SudokuDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\SudokuDemo\SudokuDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\SudokuDemo\resources\SudokuResources.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\SudokuDemo\resources\SudokuResources_ar.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\SudokuDemo\resources\SudokuResources_ar.source" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\SudokuDemo\resources\SudokuResources_es.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\SudokuDemo\resources\SudokuResources_es.source" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\SudokuDemo\resources\SudokuResources_ja.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\SudokuDemo\resources\SudokuResources_ja.source" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\SudokuDemo\resources\SudokuResources_ru.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\SudokuDemo\resources\SudokuResources_ru.source" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\SudokuDemo\solve.clp" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\SudokuDemo\sudoku.clp" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\WineDemo\WineDemo$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\WineDemo\WineDemo$2$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\WineDemo\WineDemo$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\WineDemo\WineDemo$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\WineDemo\WineDemo$WeightCellRenderer.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\WineDemo\WineDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\WineDemo\WineDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\WineDemo\resources\WineResources.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\WineDemo\resources\WineResources_ar.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\WineDemo\resources\WineResources_ar.source" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\WineDemo\resources\WineResources_es.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\WineDemo\resources\WineResources_es.source" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\WineDemo\resources\WineResources_ja.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\WineDemo\resources\WineResources_ja.source" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\WineDemo\resources\WineResources_ru.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\WineDemo\resources\WineResources_ru.source" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\WineDemo\winedemo.clp" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\examples\examples.iml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\instructions.pdf" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\Environment.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\Environment.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\FactAddressValue.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\FactAddressValue.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\FloatValue.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\FloatValue.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\InstanceAddressValue.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\InstanceAddressValue.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\InstanceNameValue.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\InstanceNameValue.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\InstanceValue.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\InstanceValue.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\IntegerValue.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\IntegerValue.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\MultifieldValue.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\MultifieldValue.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\PrimitiveValue.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\PrimitiveValue.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\Router.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\Router.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\StringValue.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\StringValue.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\SymbolValue.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\SymbolValue.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\VoidValue.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\java-src\CLIPSJNI\VoidValue.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\libCLIPSJNI.jnilib" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\CLIPSJNI_Environment.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\CLIPSJNI_Environment.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\agenda.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\agenda.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\analysis.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\analysis.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\argacces.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\argacces.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\bload.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\bload.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\bmathfun.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\bmathfun.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\bsave.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\bsave.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\classcom.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\classcom.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\classexm.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\classexm.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\classfun.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\classfun.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\classinf.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\classinf.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\classini.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\classini.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\classpsr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\classpsr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\clips.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\clsltpsr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\clsltpsr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\cmptblty.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\commline.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\commline.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\conscomp.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\conscomp.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\constant.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\constrct.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\constrct.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\constrnt.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\constrnt.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\crstrtgy.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\crstrtgy.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\cstrcbin.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\cstrcbin.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\cstrccmp.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\cstrccom.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\cstrccom.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\cstrcpsr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\cstrcpsr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\cstrnbin.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\cstrnbin.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\cstrnchk.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\cstrnchk.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\cstrncmp.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\cstrncmp.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\cstrnops.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\cstrnops.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\cstrnpsr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\cstrnpsr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\cstrnutl.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\cstrnutl.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\default.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\default.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\defins.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\defins.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\developr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\developr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dffctbin.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dffctbin.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dffctbsc.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dffctbsc.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dffctcmp.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dffctcmp.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dffctdef.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dffctdef.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dffctpsr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dffctpsr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dffnxbin.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dffnxbin.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dffnxcmp.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dffnxcmp.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dffnxexe.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dffnxexe.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dffnxfun.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dffnxfun.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dffnxpsr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dffnxpsr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dfinsbin.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dfinsbin.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dfinscmp.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\dfinscmp.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\drive.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\drive.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\ed.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\edbasic.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\edmain.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\edmisc.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\edstruct.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\edterm.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\emathfun.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\emathfun.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\engine.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\engine.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\envrnmnt.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\envrnmnt.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\evaluatn.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\evaluatn.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\expressn.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\expressn.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\exprnbin.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\exprnbin.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\exprnops.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\exprnops.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\exprnpsr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\exprnpsr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\extnfunc.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\extnfunc.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factbin.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factbin.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factbld.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factbld.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factcmp.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factcmp.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factcom.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factcom.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factfun.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factfun.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factgen.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factgen.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\facthsh.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\facthsh.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factlhs.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factlhs.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factmch.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factmch.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factmngr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factmngr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factprt.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factprt.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factqpsr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factqpsr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factqury.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factqury.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factrete.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factrete.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factrhs.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\factrhs.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\filecom.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\filecom.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\filertr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\filertr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\generate.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\generate.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\genrcbin.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\genrcbin.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\genrccmp.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\genrccmp.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\genrccom.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\genrccom.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\genrcexe.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\genrcexe.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\genrcfun.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\genrcfun.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\genrcpsr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\genrcpsr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\globlbin.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\globlbin.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\globlbsc.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\globlbsc.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\globlcmp.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\globlcmp.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\globlcom.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\globlcom.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\globldef.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\globldef.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\globlpsr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\globlpsr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\immthpsr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\immthpsr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\incrrset.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\incrrset.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\inherpsr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\inherpsr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\inscom.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\inscom.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\insfile.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\insfile.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\insfun.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\insfun.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\insmngr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\insmngr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\insmoddp.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\insmoddp.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\insmult.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\insmult.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\inspsr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\inspsr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\insquery.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\insquery.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\insqypsr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\insqypsr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\iofun.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\iofun.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\lgcldpnd.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\lgcldpnd.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\main.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\makefile.linux" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\makefile.macint" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\makefile.macppc" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\makefile.macunv" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\makefile.win" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\match.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\memalloc.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\memalloc.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\miscfun.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\miscfun.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\modulbin.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\modulbin.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\modulbsc.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\modulbsc.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\modulcmp.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\modulcmp.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\moduldef.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\moduldef.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\modulpsr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\modulpsr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\modulutl.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\modulutl.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\msgcom.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\msgcom.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\msgfun.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\msgfun.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\msgpass.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\msgpass.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\msgpsr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\msgpsr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\multifld.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\multifld.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\multifun.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\multifun.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\network.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\objbin.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\objbin.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\objcmp.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\objcmp.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\object.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\objrtbin.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\objrtbin.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\objrtbld.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\objrtbld.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\objrtcmp.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\objrtcmp.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\objrtfnx.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\objrtfnx.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\objrtgen.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\objrtgen.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\objrtmch.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\objrtmch.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\parsefun.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\parsefun.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\pattern.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\pattern.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\pprint.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\pprint.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\prccode.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\prccode.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\prcdrfun.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\prcdrfun.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\prcdrpsr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\prcdrpsr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\prdctfun.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\prdctfun.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\prntutil.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\prntutil.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\proflfun.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\proflfun.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\reorder.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\reorder.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\reteutil.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\reteutil.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\retract.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\retract.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\router.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\router.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\rulebin.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\rulebin.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\rulebld.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\rulebld.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\rulebsc.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\rulebsc.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\rulecmp.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\rulecmp.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\rulecom.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\rulecom.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\rulecstr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\rulecstr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\ruledef.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\ruledef.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\ruledlt.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\ruledlt.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\rulelhs.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\rulelhs.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\rulepsr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\rulepsr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\scanner.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\scanner.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\setup.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\shrtlnkn.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\sortfun.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\sortfun.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\strngfun.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\strngfun.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\strngrtr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\strngrtr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\symblbin.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\symblbin.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\symblcmp.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\symblcmp.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\symbol.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\symbol.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\sysdep.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\sysdep.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\textpro.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\textpro.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\tmpltbin.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\tmpltbin.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\tmpltbsc.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\tmpltbsc.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\tmpltcmp.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\tmpltcmp.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\tmpltdef.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\tmpltdef.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\tmpltfun.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\tmpltfun.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\tmpltlhs.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\tmpltlhs.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\tmpltpsr.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\tmpltpsr.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\tmpltrhs.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\tmpltrhs.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\tmpltutl.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\tmpltutl.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\userdata.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\userdata.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\userfunctions.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\usrsetup.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\utility.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\utility.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\watch.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\IdeaProjects\AIProjectWorkspace\DiceWarsGame\CLIPSJNI\library-src\watch.h" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DiceWarsGame/DiceWarsGame.iml" afterPath="$PROJECT_DIR$/DiceWarsGame/DiceWarsGame.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DiceWarsGame/src/com/example/main/GameState.java" afterPath="$PROJECT_DIR$/DiceWarsGame/src/com/example/main/GameState.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BFS, DFS,  Graph/ai-dicewars-algorithms/ai-dicewars-algorithms.iml" afterPath="$PROJECT_DIR$/BFS, DFS,  Graph/ai-dicewars-algorithms/ai-dicewars-algorithms.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BFS, DFS,  Graph/ai-dicewars-structure/ai-dicewars-structure.iml" afterPath="$PROJECT_DIR$/BFS, DFS,  Graph/ai-dicewars-structure/ai-dicewars-structure.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AIProjectWorkspace.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -477,26 +28,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyAgent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/MyAgent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="1105">
-              <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1071#1072#0" expanded="true" />
-                <element signature="e#1108#1109#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AgentRandom.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/AgentRandom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="490" max-vertical-offset="1088">
-              <caret line="56" column="10" selection-start-line="36" selection-start-column="0" selection-end-line="56" selection-end-column="10" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="223" max-vertical-offset="1122">
+              <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+              <folding>
+                <element signature="e#1055#1056#0" expanded="true" />
+                <element signature="e#1095#1096#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -514,8 +54,8 @@
       <file leaf-file-name="GameState.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/GameState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="265" max-vertical-offset="5508">
-              <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="384" max-vertical-offset="5848">
+              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -526,8 +66,8 @@
       <file leaf-file-name="MainWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/MainWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1819">
-              <caret line="63" column="26" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1938">
+              <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -538,8 +78,8 @@
       <file leaf-file-name="CLIPSAgent.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/ai/dicewars/clips/CLIPSAgent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.94736844" vertical-offset="1781" max-vertical-offset="2703">
-              <caret line="127" column="28" selection-start-line="127" selection-start-column="28" selection-end-line="127" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.22149837" vertical-offset="1666" max-vertical-offset="2703">
+              <caret line="106" column="57" selection-start-line="106" selection-start-column="57" selection-end-line="106" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -550,8 +90,18 @@
       <file leaf-file-name="FuzzyAgent.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/ai/dicewars/fuzzy/FuzzyAgent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="971" max-vertical-offset="2346">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1379" max-vertical-offset="2346">
               <caret line="81" column="29" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FCLParameters.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/ai/dicewars/fuzzy/FCLParameters.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="2176">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -568,8 +118,8 @@
         <option value="$PROJECT_DIR$/DiceWarsGame/src/com/example/main/FuzzyAgent.java" />
         <option value="$PROJECT_DIR$/DiceWarsGame/src/com/example/main/AgentRandom.java" />
         <option value="$PROJECT_DIR$/DiceWarsGame/src/com/example/main/MyAgent.java" />
-        <option value="$PROJECT_DIR$/DiceWarsGame/src/com/example/main/GameState.java" />
         <option value="$PROJECT_DIR$/DiceWarsGame/src/ai/dicewars/clips/CLIPSAgent.java" />
+        <option value="$PROJECT_DIR$/DiceWarsGame/src/com/example/main/GameState.java" />
       </list>
     </option>
   </component>
@@ -602,6 +152,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -677,6 +228,10 @@
               <option name="myItemId" value="dicewars" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -700,10 +255,31 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AIProjectWorkspace" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DiceWarsGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dicewars" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -923,33 +499,33 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="786" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1296" height="786" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721713" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928804" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721713" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1005,15 +581,49 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/MyAgent.java">
+    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/FuzzyAgent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="1105">
-          <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="2346">
+          <caret line="46" column="58" selection-start-line="46" selection-start-column="58" selection-end-line="46" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/GameState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5508">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/MainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1819">
+          <caret line="63" column="26" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/ai/dicewars/clips/CLIPSAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="2703">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/ai/dicewars/fuzzy/FuzzyAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="971" max-vertical-offset="2346">
+          <caret line="81" column="29" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1021,7 +631,67 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="490" max-vertical-offset="1088">
           <caret line="56" column="10" selection-start-line="36" selection-start-column="0" selection-end-line="56" selection-end-column="10" />
+          <folding>
+            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/FuzzyAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="2346">
+          <caret line="46" column="58" selection-start-line="46" selection-start-column="58" selection-end-line="46" selection-end-column="58" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/GameState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="265" max-vertical-offset="5508">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/MainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1819">
+          <caret line="63" column="26" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/ai/dicewars/clips/CLIPSAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2703">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/ai/dicewars/fuzzy/FuzzyAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="971" max-vertical-offset="2346">
+          <caret line="81" column="29" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/AgentRandom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="490" max-vertical-offset="1088">
+          <caret line="56" column="10" selection-start-line="36" selection-start-column="0" selection-end-line="56" selection-end-column="10" />
+          <folding>
+            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1063,23 +733,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/MyAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="1105">
-          <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/AgentRandom.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="490" max-vertical-offset="1088">
           <caret line="56" column="10" selection-start-line="36" selection-start-column="0" selection-end-line="56" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1121,23 +782,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/MyAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="1105">
-          <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/AgentRandom.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="490" max-vertical-offset="1088">
           <caret line="56" column="10" selection-start-line="36" selection-start-column="0" selection-end-line="56" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1174,18 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/MyAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2652">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/GameState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="5253">
@@ -1201,18 +841,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="496" max-vertical-offset="2346">
           <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="57" selection-end-column="45" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/MyAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="2125">
-          <caret line="88" column="46" selection-start-line="88" selection-start-column="46" selection-end-line="88" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1262,26 +890,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/AgentRandom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="490" max-vertical-offset="1088">
-          <caret line="56" column="10" selection-start-line="36" selection-start-column="0" selection-end-line="56" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/MyAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="1105">
-          <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/DiceWarsGame/jFuzzyLogic.jar!/net/sourceforge/jFuzzyLogic/FIS.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17317487" vertical-offset="0" max-vertical-offset="5083">
@@ -1304,14 +912,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/ai/dicewars/fuzzy/FCLParameters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.7712896" vertical-offset="204" max-vertical-offset="2176">
-          <caret line="98" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/JarLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7858881" vertical-offset="0" max-vertical-offset="510">
@@ -1319,23 +919,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/MainWindow.java">
+    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/GameState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1819">
-          <caret line="63" column="26" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="384" max-vertical-offset="5848">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/GameState.java">
+    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="265" max-vertical-offset="5508">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1156" max-vertical-offset="1938">
+          <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/com/example/main/AgentRandom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="223" max-vertical-offset="1122">
+          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+          <folding>
+            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/ai/dicewars/fuzzy/FCLParameters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="2176">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1349,8 +968,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DiceWarsGame/src/ai/dicewars/clips/CLIPSAgent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.94736844" vertical-offset="1781" max-vertical-offset="2703">
-          <caret line="127" column="28" selection-start-line="127" selection-start-column="28" selection-end-line="127" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.22149837" vertical-offset="1666" max-vertical-offset="2703">
+          <caret line="106" column="57" selection-start-line="106" selection-start-column="57" selection-end-line="106" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
