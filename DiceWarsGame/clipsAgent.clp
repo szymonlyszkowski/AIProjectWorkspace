@@ -14,17 +14,13 @@
 )
 
 ;Global order variables that are fetched by the handler class.
-; 1 - DoNothing
-; 2 - Fight
+; decision over 5 - fight
+; decision below or equal 5 - do nothing
 (defglobal
 	?*decision* = 6
 )
 
-;Starts here, checks if there are sufficient resources to buy sth, if not then ends turn.
-;NOTE: names are entirely optional.
-
 (defrule endTurn
 	=>
-	(printout t "CLIPS response!" crlf)
 	(bind ?*decision*)
 )
