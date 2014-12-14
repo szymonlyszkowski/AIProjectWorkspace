@@ -20,8 +20,17 @@ public class FuzzyAgent implements Agent{
     private final FIS fis;
     private final FunctionBlock functionBlock;
     private int playerNumber;
+
     /*
-     * A default constructor which sets FCL file to "fuzzyPlayer.fcl".
+     * A default constructor, should be used in modes 3 and 4 only.
+     * Remember to set playerNumber afterwards.
+     */
+    public FuzzyAgent() throws FileNotFoundException {
+        // still doesn't change anything, we will set it after constructing
+        this(0);
+    };
+    /*
+     * A constructor which sets FCL file to "fuzzyPlayer.fcl".
      * In general, it shouldn't be used.
      */
     public FuzzyAgent(int playerNumber) throws FileNotFoundException {

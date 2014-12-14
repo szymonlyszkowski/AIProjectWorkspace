@@ -1,8 +1,10 @@
 package ai.dicewars.fuzzy;
 
 import com.example.main.Vertex;
+import net.sourceforge.jFuzzyLogic.rule.Variable;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
