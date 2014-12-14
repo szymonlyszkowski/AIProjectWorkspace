@@ -9,6 +9,7 @@ import net.sourceforge.jFuzzyLogic.FunctionBlock;
 import net.sourceforge.jFuzzyLogic.rule.Variable;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,17 +18,18 @@ import java.util.List;
  * Created by Krzysiek on 2014-11-16.
  */
 public class FuzzyAgent implements Agent{
-    private final FIS fis;
-    private final FunctionBlock functionBlock;
+    private FIS fis;
+    private FunctionBlock functionBlock;
     private int playerNumber;
 
     /*
      * A default constructor, should be used in modes 3 and 4 only.
      * Remember to set playerNumber afterwards.
      */
-    public FuzzyAgent() throws FileNotFoundException {
+    public FuzzyAgent() throws IOException {
         // still doesn't change anything, we will set it after constructing
-        this(0);
+        fis = FIS.load(this.getClass().getResource("/fuzzyPlayer.fcl").openStream(), true);
+        functionBlock = fis.getFunctionBlock(null);
     };
     /*
      * A constructor which sets FCL file to "fuzzyPlayer.fcl".
@@ -40,11 +42,9 @@ public class FuzzyAgent implements Agent{
     public FuzzyAgent(int playerNumber, String filename) throws FileNotFoundException {
         this.playerNumber = playerNumber;
         fis = FIS.load(filename, true);
-
         if(fis == null) {
             throw new FileNotFoundException("Can't load file: '" + filename + "'");
         }
-
         functionBlock = fis.getFunctionBlock(null);
     }
 

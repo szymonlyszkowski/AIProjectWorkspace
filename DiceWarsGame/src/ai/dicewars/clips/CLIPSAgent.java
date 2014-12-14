@@ -6,12 +6,16 @@ import ai.dicewars.common.AnswerEx;
 import ai.dicewars.fuzzy.FCLParameters;
 import com.example.main.Vertex;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import CLIPSJNI.*;
+import sun.misc.IOUtils;
 
 /**
  * Created by Łukasz Wieczorek on 2014-12-07.
@@ -28,8 +32,17 @@ public class CLIPSAgent implements Agent {
      * A default constructor, should be used in modes 3 and 4 only.
      * Remember to set playerNumber afterwards.
      */
-    public CLIPSAgent() {
-        this(1, "clipsPlayer.clp");
+    public CLIPSAgent() throws IOException {
+        //create temp helper file
+        Random random = new Random();
+        Path path = FileSystems.getDefault().getPath("temp" + random.nextInt()  + ".tmp");
+
+        Files.copy(this.getClass().getResourceAsStream("/clipsPlayer.clp"), path);
+
+        clips = new Environment(); // Create the environment
+        clips.load(path.toAbsolutePath().toString()); // Load your file
+
+        Files.delete(path);
     }
 
     public CLIPSAgent(int playerNumber, String filename) {
@@ -133,7 +146,6 @@ public class CLIPSAgent implements Agent {
         String chosenAction = "?*decision*";
 
         int decision = 0;
-        PrimitiveValue response = clips.eval(chosenAction);
         try {
             decision = clips.eval(chosenAction).intValue();
             //System.out.println(response.intValue());
