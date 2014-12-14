@@ -101,9 +101,9 @@ public class GameState {
             defensive.setPlayer(attacker.getPlayer());
 
             if(mode != 4) {
-//            JOptionPane.showMessageDialog(null,
-//                    "Player " + attacker.getPlayer() + " moves from " + attacker.getIndex() + " to " + defensive.getIndex() + "\n" +
-//                            dicesAttacker + " to " + dicesDefensive + "\n" + "Fight won!");
+            JOptionPane.showMessageDialog(null,
+                    "Player " + attacker.getPlayer() + " moves from " + attacker.getIndex() + " to " + defensive.getIndex() + "\n" +
+                            dicesAttacker + " to " + dicesDefensive + "\n" + "Fight won!");
             }
             //System.out.println("won");
             result = true;
