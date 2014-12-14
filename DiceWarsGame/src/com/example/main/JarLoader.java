@@ -10,16 +10,15 @@ import org.xeustechnologies.jcl.JclUtils;
  */
 public class JarLoader {
 
-    public Agent loadAgent(String filePath) {
+    public Agent loadAgent(String filePath, String namespace) {
+    JarClassLoader jcl = new JarClassLoader();
+    jcl.add(filePath);
+    JclObjectFactory factory = JclObjectFactory.getInstance();
 
-        JarClassLoader jcl = new JarClassLoader();
-        jcl.add(filePath);
-        JclObjectFactory factory = JclObjectFactory.getInstance();
+    //Create object of loaded class
+    Object obj = factory.create(jcl, namespace);
 
-        //Create object of loaded class
-        Object obj = factory.create(jcl, /*"ai.dicewars.common.Agent"*/"com.example.main.MyAgent");
-
-        return JclUtils.cast(obj, Agent.class);
+    return JclUtils.cast(obj, Agent.class);
 
     }
 }

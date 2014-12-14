@@ -85,7 +85,7 @@ public class MainWindow {
 
                 frame.setSize(new Dimension(640, 480));
                 frame.setMinimumSize(new Dimension(640, 480));
-                frame.getContentPane().add(new GraphCanvas(graph, Integer.parseInt(args[0]), args[2],args[3]));
+                frame.getContentPane().add(new GraphCanvas(graph, Integer.parseInt(args[0]), args[2], args[3], args[4], args[5]));
                 frame.setLocationRelativeTo(null);
                 frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
                 frame.pack();
@@ -99,7 +99,7 @@ public class MainWindow {
             case 4:{
                 graph = converter.parseJSONToGraph(args[1]);
 
-                GraphCanvas graphCanvas = new GraphCanvas(graph, Integer.parseInt(args[0]), args[2],args[3]);
+                GraphCanvas graphCanvas = new GraphCanvas(graph, Integer.parseInt(args[0]), args[2],args[3],args[4],args[5]);
 
                 graphCanvas.getGameState().gameLoop();
 

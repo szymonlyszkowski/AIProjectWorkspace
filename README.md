@@ -31,10 +31,10 @@ java -cp "../../../*"; com.Example.main.MainWindow 2 outputGraph.txt
 
 ###Tryb 3. Agenci
 ```
-java -cp "<ścieżka gdzie jest jFuzzyLogic.jar i json-simple-1.1.1.jar>*"; com.example.main.MainWindow 3 ścieżkaDoGrafuWygenerowanewgoWyżej agent1Directory.jar agent2Directory.jar
+java -cp "<ścieżka gdzie jest jFuzzyLogic.jar i json-simple-1.1.1.jar>*"; com.example.main.MainWindow 3 ścieżkaDoGrafuWygenerowanewgoWyżej agent1Directory.jar namespaceAgenta agent2Directory.jar namespaceAgenta
 ```
 
-Program przyjmuje 2 jarki. Klasa z agentem, którą wrzucamy do jara musi nazywać się MyAgent (niezależnie od typu agenta) i implementować interfejs Agent. 
+Program przyjmuje 2 jarki. ~~Klasa z agentem, którą wrzucamy do jara musi nazywać się MyAgent (niezależnie od typu agenta) i implementować interfejs Agent.~~ Klasa z agentem musi implementować interfejs ai.dicewars.commin.Agent.
 Jeżeli dany agent ma w strukturze jakieś klasy lokalne, to je też musimy dołączyć do jara. Najprowdopodobniej klasy powinny znajdować się w jarze uwzględniając podfoldery (np. com/example/main).
 
 Dodatkowo klasa agenta musi posiadać bezparametrowy default constructor. W przypadku FuzzyAgent, plik .fcl może znajdować się poza jarem (tylko trzeba w klasie podać właściwą ścieżkę do pliku; jak damy samą nazwę pliku, to ów plik powinien sie znajdować w out/production/DiceWarsGame)

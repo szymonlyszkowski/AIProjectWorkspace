@@ -48,9 +48,9 @@ public class GameState {
     }
 
     //Used in modes 3 and 4
-    public GameState(Graph graph, GraphCanvas canvas, int mode, String player1Path, String player2Path) throws Exception {
-        player1 = new JarLoader().loadAgent(player1Path);
-        player2 = new JarLoader().loadAgent(player2Path);
+    public GameState(Graph graph, GraphCanvas canvas, int mode, String player1Path, String player1Namespace, String player2Path, String player2Namespace) throws Exception {
+        player1 = new JarLoader().loadAgent(player1Path, player1Namespace);
+        player2 = new JarLoader().loadAgent(player2Path, player2Namespace);
 
         player1.setPlayerNumber(1);
         player2.setPlayerNumber(2);

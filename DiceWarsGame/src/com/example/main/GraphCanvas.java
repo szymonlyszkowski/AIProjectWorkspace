@@ -27,13 +27,13 @@ public class GraphCanvas extends Canvas implements MouseListener {
     private GameState gameState;
 
     //Used in modes 3 and 4
-    public GraphCanvas(Graph graph, int mode, String player1, String player2) throws Exception {
+    public GraphCanvas(Graph graph, int mode, String player1, String player1Namespace, String player2, String player2Namespace) throws Exception {
         this.graph = graph;
         this.uiVertices = new ArrayList<UIVertex>();
         this.uiEdges = new ArrayList<UIEdge>();
         this.activeVertex = null;
 
-        gameState = new GameState(graph, this, mode, player1, player2);
+        gameState = new GameState(graph, this, mode, player1, player1Namespace, player2, player2Namespace);
         gameState.initGame();
 
         this.isPlayerVsPlayer = true;
