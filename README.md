@@ -51,6 +51,13 @@ cd ~repos/AIProject/DiceWarsGame/out/production/DiceWarsGame/
 jar cvf result.jar /ai/dicewars/common/Agent.class
 ```
 
+###Tryb 4. Bez GUI
+Jeżeli w swoich agentach nie ma żadnego wyświetlania rzeczy, to po odpaleniu komendy konsola wyświetli tylko zwycięzcę.
+
+```
+java -cp "<ścieżka gdzie jest jFuzzyLogic.jar i json-simple-1.1.1.jar>*"; com.example.main.MainWindow 4 ścieżkaDoGrafuWygenerowanewgoWyżej agent1Directory.jar agent2Directory.jar
+```
+
 ###Odpalanie z agentem w CLIPSie
 ```
 java -cp "<ścieżka gdzie jest jFuzzyLogic.jar i json-simple-1.1.1.jar>*"; -Djava.library.path=../../.. com.example.main.MainWindow [OPCJE JAK WCZEŚNIEJ]

@@ -41,8 +41,9 @@ public class FCLParameters {
                 enemysOverallDicesCount+=currentVertex.getNrOfDices();
             }
         };
-
-        overallPossesion = mineOverallDicesCount / (mineOverallDicesCount + enemysOverallDicesCount);
+        double a = mineOverallDicesCount + enemysOverallDicesCount;
+        double b = (double)mineOverallDicesCount;
+        overallPossesion = (double)mineOverallDicesCount / ((double) mineOverallDicesCount +(double) enemysOverallDicesCount);
 
         range1Possesion = getPossesion(getAdjacentInRange(mineVertex, allVertices, 1), playerNumber);
         range2Possesion = getPossesion(getAdjacentInRange(mineVertex, allVertices, 2), playerNumber);
@@ -137,7 +138,7 @@ public class FCLParameters {
             }
         };
 
-
-        return mineDicesCount / (mineDicesCount + enemysDicesCount);
+        double result = (double) mineDicesCount / ((double) (mineDicesCount +enemysDicesCount));
+        return result;
     }
 }
