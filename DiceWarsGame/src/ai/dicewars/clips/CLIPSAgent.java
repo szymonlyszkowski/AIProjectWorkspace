@@ -107,7 +107,7 @@ public class CLIPSAgent implements Agent {
 
         clips.reset(); // Reset the values
 
-        // Assert all facts about the current world state
+        //Assert all facts about the current world state
         clips.assertString("(game_situation (mineDicesCountInCurrentVertex " + Integer.toString(mineDicesCountInCurrentVertex) + "))");
         clips.assertString("(game_situation (enemysDicesCountInCurrentVertex " + Integer.toString(enemysDicesCountInCurrentVertex) + "))");
         clips.assertString("(game_situation (overallPossesion " + Double.toString(overallPossesion) + "))");
@@ -116,18 +116,26 @@ public class CLIPSAgent implements Agent {
         clips.assertString("(game_situation (range3Possesion " + Double.toString(range3Possesion) + "))");
         clips.assertString("(game_situation (mineOverallDicesCount " + Integer.toString(mineOverallDicesCount) + "))");
         clips.assertString("(game_situation (enemysOverallDicesCount " + Integer.toString(enemysOverallDicesCount) + "))");
+        clips.assertString("(mojazmienna 99)");
+        //clips.assertString("(game_situation (mineDicesCountInCurrentVertex " + Integer.toString(mineDicesCountInCurrentVertex) + ") (enemysDicesCountInCurrentVertex " + Integer.toString(enemysDicesCountInCurrentVertex) + ") (overallPossesion " + Double.toString(overallPossesion) + ") (range1Possesion " + Double.toString(range1Possesion) + ") (range2Possesion " + Double.toString(range2Possesion) + ") (range3Possesion " + Double.toString(range3Possesion) + ") (mineOverallDicesCount " + Integer.toString(mineOverallDicesCount) + ") (enemysOverallDicesCount " + Integer.toString(enemysOverallDicesCount) + "))");
+
+        //clips.assertString("(node (idNumber 1) (belongsTo 2) (squares 3) (circles 4) (triangles 5) (unitCreationType 6) (unitCreationSpeed 7) (availableAdjacentNodes "+a+" "+b+" "+c+" "+d+" "+e+") ))");
 
         clips.run(); // Runs the agent
+
         String chosenAction = "?*decision*";
 
         int decision = 0;
+        PrimitiveValue response = clips.eval(chosenAction);
         try {
             decision = clips.eval(chosenAction).intValue();
+            //System.out.println(response.intValue());
         }
+
         catch(Exception e){
             e.printStackTrace();
         }
-
+        System.out.println(decision);
         return decision > 5 ? CLIPSDecision.Fight : CLIPSDecision.DoNothing;
     }
 
