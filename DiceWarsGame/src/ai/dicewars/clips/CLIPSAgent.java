@@ -24,6 +24,13 @@ public class CLIPSAgent implements Agent {
 //    public CLIPSAgent(int playerNumber) throws FileNotFoundException {
 //        this(playerNumber, "CLIPSTemplate.clp");
 //    };
+    /*
+     * A default constructor, should be used in modes 3 and 4 only.
+     * Remember to set playerNumber afterwards.
+     */
+    public CLIPSAgent() {
+        this(1, "clipsPlayer.clp");
+    }
 
     public CLIPSAgent(int playerNumber, String filename) {
         this.playerNumber = playerNumber;
