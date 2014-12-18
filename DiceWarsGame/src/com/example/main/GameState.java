@@ -1,9 +1,9 @@
 package com.example.main;
 
-import ai.dicewars.agent.MyAgent;
 import ai.dicewars.clips.CLIPSAgent;
 import ai.dicewars.common.Agent;
 import ai.dicewars.common.Answer;
+import ai.dicewars.common.AnswerEx;
 import ai.dicewars.fuzzy.FuzzyAgent;
 
 import javax.swing.*;
@@ -27,25 +27,28 @@ public class GameState {
 
     private int mode;
 
+    private int roundsCount;
+    private Boolean isDraw;
+
     //create instances of agents 
     Agent player1 = null;
     Agent player2 = null;
 
     //Used in mode 2
     public GameState(Graph graph, GraphCanvas canvas, int mode) throws MalformedURLException {
-        try {
-            player1 = new CLIPSAgent(1, "../../../clipsAgent.clp");
-            player2 = new FuzzyAgent(2, "../../../templateFuzzy.fcl");
-        } catch (FileNotFoundException e) {
-            System.err.println("Cannot find FCL player.");
-            System.exit(1);
-        }
+
+        player1 = new CLIPSAgent(1, "G:\\Moje dokumenty\\Information Technology\\Artificial Intelligence & Expert Systems\\krzysiekz.clp");
+        player2 = new CLIPSAgent(2, "G:\\Moje dokumenty\\Information Technology\\Artificial Intelligence & Expert Systems\\krzysiekz.clp");
+
 
         this.canvas = canvas;
         this.graph = graph;
         this.vertices = this.graph.getGraphStructure();
         this.whoseTurn = 1;
         this.mode = mode;
+
+        this.roundsCount = 0;
+        this.isDraw = false;
     }
 
     //Used in modes 3 and 4
@@ -61,6 +64,9 @@ public class GameState {
         this.vertices = this.graph.getGraphStructure();
         this.whoseTurn = 1;
         this.mode = mode;
+
+        this.roundsCount = 0;
+        this.isDraw = false;
     }
 
 
@@ -150,10 +156,9 @@ public class GameState {
      * @return
      */
     public boolean gameEnds() {
-
-        boolean end = false;
         int player1 = 0;
         int player2 = 0;
+        int whoWon = 0;
 
         for (Vertex vertex : vertices) {
 
@@ -163,16 +168,22 @@ public class GameState {
                 ++player2;
             }
         }
-        if (player1 == 0 || player2 == 0) {
-            end = true;
-            if(vertices.get(0).getPlayer() == 1){
-                System.out.print("Winner: player1");
-            }
-            else{
-                System.out.print("Winner: player2");
+
+        if(roundsCount < 1000) {
+            if (player1 == 0 || player2 == 0) {
+                if (vertices.get(0).getPlayer() == 1) {
+                    whoWon = 1;
+                } else {
+                    whoWon = 2;
+                }
+                System.out.print(whoWon);
             }
         }
-        return end;
+        else {
+            whoWon = player1 > player2 ? 1 : 2;
+        }
+
+        return whoWon > 0;
     }
 
 
@@ -243,6 +254,7 @@ public class GameState {
             if (getWhoseTurn() == 1) {
 
                 Answer ans = player1.makeMove(vertices);
+                roundsCount++;
 
                 if (ans.isEmptyMove() == true) {
                     endTurn();
@@ -274,6 +286,7 @@ public class GameState {
             if (getWhoseTurn() == 2) {
 
                 Answer ans2 = player2.makeMove(vertices);
+                roundsCount++;
 
                 if (ans2.isEmptyMove() == true) {
                     endTurn();
@@ -307,18 +320,21 @@ public class GameState {
     }
 
     public void doMove(Vertex attackerVertex, Vertex defenderVertex) {
-
-        if ((attackerVertex.getAdjacencyList()).indexOf(defenderVertex.getIndex()) >= 0
+        boolean a = (attackerVertex.getAdjacencyList()).indexOf(defenderVertex.getIndex()) >= 0;
+        boolean b = attackerVertex.getPlayer() != defenderVertex.getPlayer();
+        boolean c = attackerVertex.getNrOfDices() > 1;
+        boolean d = attackerVertex.getPlayer() == whoseTurn;
+        if (a
                 &&
-                attackerVertex.getPlayer() != defenderVertex.getPlayer()
+                b
                 &&
-                attackerVertex.getNrOfDices() > 1
-                &&
-                attackerVertex.getPlayer() == whoseTurn) {
+                c
+                && d
+                ) {
             subjugationSuccess(attackerVertex, defenderVertex);
             validMove = true;
         } else {
-            JOptionPane.showMessageDialog(null, "Invalid move!");
+            JOptionPane.showMessageDialog(null, "Invalid move!\n"+a+"\n"+b+"\n"+c+"\n"+d);
             validMove = false;
         }
 
