@@ -1,6 +1,9 @@
 package com.example.main;
 
 
+import ai.dicewars.clips.CLIPSAgent;
+import ai.dicewars.fuzzy.FuzzyAgent;
+import net.sf.clipsrules.jni.CLIPSError;
 import org.json.simple.JSONObject;
 
 import javax.swing.*;
@@ -107,5 +110,10 @@ public class MainWindow {
 
             }
         }
+    }
+
+    @org.junit.Test
+    public void test() throws IOException, CLIPSError {
+        new CLIPSAgent();
     }
 }

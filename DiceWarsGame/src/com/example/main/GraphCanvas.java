@@ -1,5 +1,7 @@
 package com.example.main;
 
+import net.sf.clipsrules.jni.CLIPSError;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -45,7 +47,7 @@ public class GraphCanvas extends Canvas implements MouseListener {
     }
 
     //Used in mode 2
-    public GraphCanvas(Graph graph, int mode) throws MalformedURLException {
+    public GraphCanvas(Graph graph, int mode) throws MalformedURLException, CLIPSError {
         this.graph = graph;
         this.uiVertices = new ArrayList<UIVertex>();
         this.uiEdges = new ArrayList<UIEdge>();
@@ -165,8 +167,11 @@ public class GraphCanvas extends Canvas implements MouseListener {
             // Game loop
             // is
             // here
-            gameState.gameLoop();
-
+            try {
+                gameState.gameLoop();
+            } catch (CLIPSError clipsError) {
+                clipsError.printStackTrace();
+            }
 
         }
 

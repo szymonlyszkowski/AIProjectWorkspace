@@ -3,11 +3,9 @@ package com.example.main;
 import ai.dicewars.clips.CLIPSAgent;
 import ai.dicewars.common.Agent;
 import ai.dicewars.common.Answer;
-import ai.dicewars.common.AnswerEx;
-import ai.dicewars.fuzzy.FuzzyAgent;
+import net.sf.clipsrules.jni.CLIPSError;
 
 import javax.swing.*;
-import java.io.FileNotFoundException;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -35,7 +33,7 @@ public class GameState {
     Agent player2 = null;
 
     //Used in mode 2
-    public GameState(Graph graph, GraphCanvas canvas, int mode) throws MalformedURLException {
+    public GameState(Graph graph, GraphCanvas canvas, int mode) throws MalformedURLException, CLIPSError {
 
         player1 = new CLIPSAgent(1, "G:\\Moje dokumenty\\Information Technology\\Artificial Intelligence & Expert Systems\\krzysiekz.clp");
         player2 = new CLIPSAgent(2, "G:\\Moje dokumenty\\Information Technology\\Artificial Intelligence & Expert Systems\\krzysiekz.clp");
@@ -246,7 +244,7 @@ public class GameState {
     }
 
     //edit by Marcin
-    public void gameLoop() {
+    public void gameLoop() throws CLIPSError {
 
         //System.out.println("The game is rolling");
         while (gameEnds() == false) {

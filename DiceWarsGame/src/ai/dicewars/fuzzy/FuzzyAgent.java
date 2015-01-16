@@ -10,7 +10,6 @@ import net.sourceforge.jFuzzyLogic.rule.Variable;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,9 +27,10 @@ public class FuzzyAgent implements Agent{
      */
     public FuzzyAgent() throws IOException {
         // still doesn't change anything, we will set it after constructing
-        fis = FIS.load(this.getClass().getResource("/fuzzyPlayer.fcl").openStream(), true);
+        fis = FIS.load(this.getClass().getResource("templateFuzzy2.fcl").openStream(), true);
         functionBlock = fis.getFunctionBlock(null);
     };
+
     /*
      * A constructor which sets FCL file to "fuzzyPlayer.fcl".
      * In general, it shouldn't be used.

@@ -5,17 +5,16 @@ import ai.dicewars.common.Answer;
 import ai.dicewars.common.AnswerEx;
 import ai.dicewars.fuzzy.FCLParameters;
 import com.example.main.Vertex;
+import net.sf.clipsrules.jni.CLIPSError;
+import net.sf.clipsrules.jni.Environment;
 
-import java.io.*;
+import java.io.IOException;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
-import CLIPSJNI.*;
-import sun.misc.IOUtils;
 
 /**
  * Created by Łukasz Wieczorek on 2014-12-07.
@@ -25,19 +24,19 @@ public class CLIPSAgent implements Agent {
     private String agentFilePath;
     private Environment clips;
 
-//    public CLIPSAgent(int playerNumber) throws FileNotFoundException {
-//        this(playerNumber, "CLIPSTemplate.clp");
-//    };
+    //    public CLIPSAgent(int playerNumber) throws FileNotFoundException {
+    //        this(playerNumber, "CLIPSTemplate.clp");
+    //    };
     /*
      * A default constructor, should be used in modes 3 and 4 only.
      * Remember to set playerNumber afterwards.
      */
-    public CLIPSAgent() throws IOException {
+    public CLIPSAgent() throws IOException, CLIPSError {
         //create temp helper file
         Random random = new Random();
-        Path path = FileSystems.getDefault().getPath("temp" + random.nextInt()  + ".tmp");
+        Path path = FileSystems.getDefault().getPath("temp" + random.nextInt() + ".tmp");
 
-        Files.copy(this.getClass().getResourceAsStream("/clipsPlayer.clp"), path);
+        Files.copy(this.getClass().getResourceAsStream("clipsAgent.clp"), path);
 
         clips = new Environment(); // Create the environment
         clips.load(path.toAbsolutePath().toString()); // Load your file
@@ -45,7 +44,7 @@ public class CLIPSAgent implements Agent {
         Files.delete(path);
     }
 
-    public CLIPSAgent(int playerNumber, String filename) {
+    public CLIPSAgent(int playerNumber, String filename) throws CLIPSError {
         this.playerNumber = playerNumber;
         this.agentFilePath = filename;
 
@@ -54,7 +53,7 @@ public class CLIPSAgent implements Agent {
     }
 
     @Override
-    public Answer makeMove(ArrayList<Vertex> vertices) {
+    public Answer makeMove(ArrayList<Vertex> vertices) throws CLIPSError {
         Boolean isEmpty = true;
 
         /* A. iterate through all of my vertices
@@ -71,7 +70,7 @@ public class CLIPSAgent implements Agent {
         for (int i = 0; i < verticesSize; i++) {
             // iterate through all of my vertices
             Vertex currentVertex = vertices.get(i);
-            if(isVertexMine(currentVertex)) {
+            if (isVertexMine(currentVertex)) {
 
                 if (currentVertex.getNrOfDices() < 2) {
                     continue;
@@ -80,22 +79,22 @@ public class CLIPSAgent implements Agent {
                 ArrayList<Vertex> adjacentVertices = getAdjacentVertices(currentVertex, vertices);
 
                 int adjacentVerticesSize = adjacentVertices.size();
-                for (int j = 0; j <adjacentVerticesSize; j++) {
+                for (int j = 0; j < adjacentVerticesSize; j++) {
                     // iterate through them
                     Vertex currentVertex2 = adjacentVertices.get(j);
 
-                    if(!isVertexMine(currentVertex2)) {
+                    if (!isVertexMine(currentVertex2)) {
                         // if the adjacent vertex is not mine, decide
                         // "to be (fighting) or not to be (fighting),
                         // that is the question"
                         CLIPSDecision decision = determineDecision(
                                 currentVertex, currentVertex2, adjacentVertices, vertices);
 
-                        switch(decision) {
-                            case Fight:
-                                return new AnswerEx(false, currentVertex.getIndex(), currentVertex2.getIndex());
-                            case DoNothing:
-                                break;
+                        switch (decision) {
+                        case Fight:
+                            return new AnswerEx(false, currentVertex.getIndex(), currentVertex2.getIndex());
+                        case DoNothing:
+                            break;
                         }
                     }
                 } // end of adjacent vertices iteration
@@ -108,9 +107,9 @@ public class CLIPSAgent implements Agent {
     }
 
     private CLIPSDecision determineDecision(Vertex mineVertex,
-                                            Vertex enemysVertex,
-                                            ArrayList<Vertex> verticesAdjacentToMine,
-                                            ArrayList<Vertex> allVertices) {
+            Vertex enemysVertex,
+            ArrayList<Vertex> verticesAdjacentToMine,
+            ArrayList<Vertex> allVertices) throws CLIPSError {
         FCLParameters fclParameters = new FCLParameters(mineVertex,
                 enemysVertex,
                 verticesAdjacentToMine,
@@ -147,11 +146,9 @@ public class CLIPSAgent implements Agent {
 
         int decision = 0;
         try {
-            decision = clips.eval(chosenAction).intValue();
+            decision = clips.eval(chosenAction).hashCode();
             //System.out.println(response.intValue());
-        }
-
-        catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
