@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * Created by Krzysiek on 2014-11-16.
  */
-public class FuzzyAgent implements Agent{
+public class FuzzyAgentSzymon implements Agent {
     private FIS fis;
     private FunctionBlock functionBlock;
     private int playerNumber;
@@ -25,24 +25,28 @@ public class FuzzyAgent implements Agent{
      * A default constructor, should be used in modes 3 and 4 only.
      * Remember to set playerNumber afterwards.
      */
-    public FuzzyAgent() throws IOException {
+    public FuzzyAgentSzymon() throws IOException {
         // still doesn't change anything, we will set it after constructing
-        fis = FIS.load(this.getClass().getResource("templateFuzzy2.fcl").openStream(), true);
+        fis = FIS.load(this.getClass().getResource("fuzzyLogicSzymon.fcl").openStream(), true);
         functionBlock = fis.getFunctionBlock(null);
-    };
+    }
+
+    ;
 
     /*
      * A constructor which sets FCL file to "fuzzyPlayer.fcl".
      * In general, it shouldn't be used.
      */
-    public FuzzyAgent(int playerNumber) throws FileNotFoundException {
+    private FuzzyAgentSzymon(int playerNumber) throws FileNotFoundException {
         this(playerNumber, "fuzzyPlayer.fcl");
-    };
+    }
 
-    public FuzzyAgent(int playerNumber, String filename) throws FileNotFoundException {
+    ;
+
+    public FuzzyAgentSzymon(int playerNumber, String filename) throws FileNotFoundException {
         this.playerNumber = playerNumber;
         fis = FIS.load(filename, true);
-        if(fis == null) {
+        if (fis == null) {
             throw new FileNotFoundException("Can't load file: '" + filename + "'");
         }
         functionBlock = fis.getFunctionBlock(null);
@@ -66,30 +70,30 @@ public class FuzzyAgent implements Agent{
         for (int i = 0; i < verticesSize; i++) {
             // iterate through all of my vertices
             Vertex currentVertex = vertices.get(i);
-            if(isVertexMine(currentVertex)) {
+            if (isVertexMine(currentVertex)) {
 
                 //fetch adjacent ones
                 ArrayList<Vertex> adjacentVertices = getAdjacentVertices(currentVertex, vertices);
 
                 int adjacentVerticesSize = adjacentVertices.size();
-                for (int j = 0; j <adjacentVerticesSize; j++) {
-                        // iterate through them
-                        Vertex currentVertex2 = adjacentVertices.get(j);
+                for (int j = 0; j < adjacentVerticesSize; j++) {
+                    // iterate through them
+                    Vertex currentVertex2 = adjacentVertices.get(j);
 
-                        if(!isVertexMine(currentVertex2)) {
-                            // if the adjacent vertex is not mine, decide
-                            // "to be (fighting) or not to be (fighting),
-                            // that is the question"
-                            FuzzyDecision decision = determineDecision(
-                                    currentVertex, currentVertex2, adjacentVertices, vertices);
+                    if (!isVertexMine(currentVertex2)) {
+                        // if the adjacent vertex is not mine, decide
+                        // "to be (fighting) or not to be (fighting),
+                        // that is the question"
+                        FuzzyDecision decision = determineDecision(
+                                currentVertex, currentVertex2, vertices);
 
-                            switch(decision) {
-                                case Fight:
-                                    return new AnswerEx(false, currentVertex.getIndex(), currentVertex2.getIndex());
-                                case DoNothing:
-                                    break;
-                            }
+                        switch (decision) {
+                        case Fight:
+                            return new AnswerEx(false, currentVertex.getIndex(), currentVertex2.getIndex());
+                        case DoNothing:
+                            break;
                         }
+                    }
                 } // end of adjacent vertices iteration
             }
         }
@@ -100,23 +104,25 @@ public class FuzzyAgent implements Agent{
     }
 
     private FuzzyDecision determineDecision(Vertex mineVertex,
-                                            Vertex enemysVertex,
-                                            ArrayList<Vertex> verticesAdjacentToMine,
-                                            ArrayList<Vertex> allVertices) {
+            Vertex enemiesVertex,
+            ArrayList<Vertex> allVertices) {
         FCLParameters fclParameters = new FCLParameters(mineVertex,
-                enemysVertex,
-                verticesAdjacentToMine,
+                enemiesVertex,
                 allVertices,
                 playerNumber);
 
-        functionBlock.setVariable("mineDicesCountInCurrentVertex", fclParameters.getMineDicesCountInCurrentVertex());
-        functionBlock.setVariable("enemysDicesCountInCurrentVertex", fclParameters.getEnemysDicesCountInCurrentVertex());
-        functionBlock.setVariable("overallPossesion", fclParameters.getOverallPossesion());
-        functionBlock.setVariable("range1Possesion",fclParameters.getRange1Possesion());
-        functionBlock.setVariable("range2Possesion",fclParameters.getRange2Possesion());
-        functionBlock.setVariable("range3Possesion",fclParameters.getRange3Possesion());
-        functionBlock.setVariable("mineOverallDicesCount",fclParameters.getMineOverallDicesCount());
-        functionBlock.setVariable("enemysOverallDicesCount",fclParameters.getEnemysOverallDicesCount());
+        functionBlock.setVariable("mineDicesCountInCurrentVertex", fclParameters.getDicesAmountInCurrentVertex());
+        functionBlock.setVariable("enemiesDicesCountInCurrentVertex", fclParameters.getDicesAmountInVertexToAttack());
+        functionBlock.setVariable("mineOverallDicesPossessionRatio", fclParameters.getMineOverallDicesPossessionRatio());
+        functionBlock.setVariable("range1Possession", fclParameters.getRange1Possession());
+        functionBlock.setVariable("range2Possession", fclParameters.getRange2Possession());
+        functionBlock.setVariable("range3Possession", fclParameters.getRange3Possession());
+        functionBlock.setVariable("mineOverallDicesCount", fclParameters.getMineOverallDicesAmount());
+        functionBlock.setVariable("enemiesOverallDicesCount", fclParameters.getEnemiesOverallDicesAmount());
+        functionBlock.setVariable("mineSafeVertexAmount", fclParameters.getMineSafeVertexAmount());
+        functionBlock.setVariable("mineOverallVertexAmount", fclParameters.getMineOverallVertexAmount());
+        functionBlock.setVariable("mineOverallVertexPossessionRatio", fclParameters.getMineOverallVertexPossessionRatio());
+        functionBlock.setVariable("enemiesOverallVertexAmount", fclParameters.getEnemiesOverallVertexAmount());
 
         functionBlock.evaluate();
         // is the line below really needed?

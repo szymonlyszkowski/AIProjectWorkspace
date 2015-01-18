@@ -6,87 +6,151 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Krzysiek on 2014-11-16.
- * Helper class used to generate FCL input parameters.
+ * Helper class to create input for
+ * fuzzy logic agent
  */
 public class FCLParameters {
-    private int mineDicesCountInCurrentVertex;
-    private int enemysDicesCountInCurrentVertex;
-    private double overallPossesion;
-    private double range1Possesion;
-    private double range2Possesion;
-    private double range3Possesion;
-    private int mineOverallDicesCount;
-    private int enemysOverallDicesCount;
+    private int dicesAmountInCurrentVertex;
+    private int dicesAmountInVertexToAttack;
+    private double mineOverallDicesPossessionRatio;
+    private double range1Possession;
+    private double range2Possession;
+    private double range3Possession;
+    private int mineOverallDicesAmount;
+    private int enemiesOverallDicesAmount;
+    private int mineSafeVertexAmount;
+    private int mineOverallVertexAmount;
+    private double mineOverallVertexPossessionRatio;
+    private int enemiesOverallVertexAmount;
+
     public FCLParameters(Vertex mineVertex,
-                         Vertex enemysVertex,
-                         ArrayList<Vertex> verticesAdjacentToMine,
-                         ArrayList<Vertex> allVertices,
-                         int playerNumber) {
-        mineDicesCountInCurrentVertex = mineVertex.getNrOfDices();
-        enemysDicesCountInCurrentVertex = enemysVertex.getNrOfDices();
-        mineOverallDicesCount = 0;
-        enemysOverallDicesCount = 0;
+            Vertex enemiesVertex,
+            ArrayList<Vertex> allVertices,
+            int playerNumber) {
+        dicesAmountInCurrentVertex = mineVertex.getNrOfDices();
+        dicesAmountInVertexToAttack = enemiesVertex.getNrOfDices();
+        mineOverallDicesAmount = 0;
+        enemiesOverallDicesAmount = 0;
 
         int allVerticesSize = allVertices.size();
-        for (int i = 0; i <allVerticesSize; i++) {
+        for (int i = 0; i < allVerticesSize; i++) {
             Vertex currentVertex = allVertices.get(i);
 
-            if(currentVertex.getPlayer() == playerNumber) {
-                mineOverallDicesCount+=currentVertex.getNrOfDices();
+            if (currentVertex.getPlayer() == playerNumber) {
+                mineOverallDicesAmount += currentVertex.getNrOfDices();
+            } else {
+                enemiesOverallDicesAmount += currentVertex.getNrOfDices();
             }
-            else {
-                enemysOverallDicesCount+=currentVertex.getNrOfDices();
+        }
+        ;
+
+        mineSafeVertexAmount = calculateMineSafeVertexAmount(allVertices);
+        mineOverallDicesPossessionRatio = (double) mineOverallDicesAmount / ((double) mineOverallDicesAmount + (double) enemiesOverallDicesAmount);
+        mineOverallVertexAmount = calculateMineOverallVertexAmount(playerNumber, allVertices);
+        enemiesOverallVertexAmount = calculateEnemiesOverallVertexAmount(playerNumber, allVertices);
+        mineOverallVertexPossessionRatio = calculateMineOverallVertexPossessionRatio();
+
+        range1Possession = getPossesion(getAdjacentInRange(mineVertex, allVertices, 1), playerNumber);
+        range2Possession = getPossesion(getAdjacentInRange(mineVertex, allVertices, 2), playerNumber);
+        range3Possession = getPossesion(getAdjacentInRange(mineVertex, allVertices, 3), playerNumber);
+    }
+
+    private double calculateMineOverallVertexPossessionRatio() {
+
+        return (double) mineOverallVertexAmount / ((double) mineOverallVertexAmount + (double) enemiesOverallVertexAmount);
+    }
+
+    private int calculateEnemiesOverallVertexAmount(int playerNumber, ArrayList<Vertex> allVertices) {
+        int result = 0;
+        for (Vertex vertex : allVertices) {
+            if (vertex.getPlayer() != playerNumber) {
+                ++result;
             }
-        };
-        double a = mineOverallDicesCount + enemysOverallDicesCount;
-        double b = (double)mineOverallDicesCount;
-        overallPossesion = (double)mineOverallDicesCount / ((double) mineOverallDicesCount +(double) enemysOverallDicesCount);
-
-        range1Possesion = getPossesion(getAdjacentInRange(mineVertex, allVertices, 1), playerNumber);
-        range2Possesion = getPossesion(getAdjacentInRange(mineVertex, allVertices, 2), playerNumber);
-        range3Possesion = getPossesion(getAdjacentInRange(mineVertex, allVertices, 3), playerNumber);
+        }
+        return result;
     }
 
-    public int getMineDicesCountInCurrentVertex() {
-        return mineDicesCountInCurrentVertex;
+    private int calculateMineOverallVertexAmount(int playerNumber, ArrayList<Vertex> allVertices) {
+        int result = 0;
+        for (Vertex vertex : allVertices) {
+            if (vertex.getPlayer() == playerNumber) {
+                ++result;
+            }
+        }
+        return result;
     }
 
-    public int getEnemysDicesCountInCurrentVertex() {
-        return enemysDicesCountInCurrentVertex;
+    private int calculateMineSafeVertexAmount(ArrayList<Vertex> allVertices) {
+        int safeVertices = 0;
+        boolean isVertexFriendly = true;
+        for (Vertex vertex : allVertices) {
+            ArrayList<Vertex> adjacent = getAdjacentVertices(vertex, allVertices);
+            for (Vertex vertexToCompare : adjacent) {
+                if (vertex.getPlayer() != vertexToCompare.getPlayer()) {
+                    isVertexFriendly = false;
+                }
+
+            }
+            if (isVertexFriendly) {
+                ++safeVertices;
+            }
+        }
+        return safeVertices;
     }
 
-    public double getOverallPossesion() {
-        return overallPossesion;
+    public int getDicesAmountInCurrentVertex() {
+        return dicesAmountInCurrentVertex;
     }
 
-    public double getRange1Possesion() {
-        return range1Possesion;
+    public int getDicesAmountInVertexToAttack() {
+        return dicesAmountInVertexToAttack;
     }
 
-    public double getRange2Possesion() {
-        return range2Possesion;
+    public double getMineOverallDicesPossessionRatio() {
+        return mineOverallDicesPossessionRatio;
     }
 
-    public double getRange3Possesion() {
-        return range3Possesion;
+    public double getRange1Possession() {
+        return range1Possession;
     }
 
-    public int getMineOverallDicesCount() {
-        return mineOverallDicesCount;
+    public double getRange2Possession() {
+        return range2Possession;
     }
 
-    public int getEnemysOverallDicesCount() {
-        return enemysOverallDicesCount;
+    public double getRange3Possession() {
+        return range3Possession;
     }
 
+    public int getMineOverallDicesAmount() {
+        return mineOverallDicesAmount;
+    }
+
+    public int getEnemiesOverallDicesAmount() {
+        return enemiesOverallDicesAmount;
+    }
+
+    public int getMineSafeVertexAmount() {
+        return mineSafeVertexAmount;
+    }
+
+    public int getEnemiesOverallVertexAmount() {
+        return enemiesOverallVertexAmount;
+    }
+
+    public int getMineOverallVertexAmount() {
+        return mineOverallVertexAmount;
+    }
+
+    public double getMineOverallVertexPossessionRatio() {
+        return mineOverallVertexPossessionRatio;
+    }
 
     private ArrayList<Vertex> getAdjacentInRange(Vertex center, ArrayList<Vertex> allVertices, int range) {
         ArrayList<Vertex> result = new ArrayList<Vertex>();
-        if(range == 0) {
+        if (range == 0) {
             result.add(center);
-        }
-        else {
+        } else {
             ArrayList<Vertex> adjacentVertices = getAdjacentVertices(center, allVertices);
             int adjacentEdgesSize = adjacentVertices.size();
             for (int i = 0; i < adjacentEdgesSize; i++) {
@@ -114,7 +178,7 @@ public class FCLParameters {
         int whatToAddSize = whatToAdd.size();
         for (int i = 0; i < whatToAddSize; i++) {
             Vertex currentVertex = whatToAdd.get(i);
-            if(!whereToAdd.contains(currentVertex)) {
+            if (!whereToAdd.contains(currentVertex)) {
                 whereToAdd.add(currentVertex);
             }
         }
@@ -125,18 +189,18 @@ public class FCLParameters {
         int mineDicesCount = 0;
         int enemysDicesCount = 0;
         int allVerticesSize = source.size();
-        for (int i = 0; i <allVerticesSize; i++) {
+        for (int i = 0; i < allVerticesSize; i++) {
             Vertex currentVertex = source.get(i);
 
-            if(currentVertex.getPlayer() == minePlayerNumber) {
-                mineDicesCount+=currentVertex.getNrOfDices();
+            if (currentVertex.getPlayer() == minePlayerNumber) {
+                mineDicesCount += currentVertex.getNrOfDices();
+            } else {
+                enemysDicesCount += currentVertex.getNrOfDices();
             }
-            else {
-                enemysDicesCount+=currentVertex.getNrOfDices();
-            }
-        };
+        }
+        ;
 
-        double result = (double) mineDicesCount / ((double) (mineDicesCount +enemysDicesCount));
+        double result = (double) mineDicesCount / ((double) (mineDicesCount + enemysDicesCount));
         return result;
     }
 }

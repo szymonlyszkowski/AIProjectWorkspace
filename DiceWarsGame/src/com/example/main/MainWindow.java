@@ -2,16 +2,13 @@ package com.example.main;
 
 
 import ai.dicewars.clips.CLIPSAgent;
-import ai.dicewars.fuzzy.FuzzyAgent;
 import net.sf.clipsrules.jni.CLIPSError;
 import org.json.simple.JSONObject;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.net.MalformedURLException;
 
 public class MainWindow {
     private static GraphCanvas canvas;

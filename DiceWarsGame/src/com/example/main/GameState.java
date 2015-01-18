@@ -38,7 +38,6 @@ public class GameState {
         player1 = new CLIPSAgent(1, "G:\\Moje dokumenty\\Information Technology\\Artificial Intelligence & Expert Systems\\krzysiekz.clp");
         player2 = new CLIPSAgent(2, "G:\\Moje dokumenty\\Information Technology\\Artificial Intelligence & Expert Systems\\krzysiekz.clp");
 
-
         this.canvas = canvas;
         this.graph = graph;
         this.vertices = this.graph.getGraphStructure();
@@ -50,7 +49,8 @@ public class GameState {
     }
 
     //Used in modes 3 and 4
-    public GameState(Graph graph, GraphCanvas canvas, int mode, String player1Path, String player1Namespace, String player2Path, String player2Namespace) throws Exception {
+    public GameState(Graph graph, GraphCanvas canvas, int mode, String player1Path, String player1Namespace, String player2Path, String player2Namespace)
+            throws Exception {
         player1 = new JarLoader().loadAgent(player1Path, player1Namespace);
         player2 = new JarLoader().loadAgent(player2Path, player2Namespace);
 
@@ -66,7 +66,6 @@ public class GameState {
         this.roundsCount = 0;
         this.isDraw = false;
     }
-
 
     public void initGame() {
         assignPlayersToVertices(this.vertices);
@@ -89,14 +88,13 @@ public class GameState {
         int dicesDefensive = throwTheDice(defensive.getNrOfDices());
         int dicesAttacker = throwTheDice(attacker.getNrOfDices());
 
-
         if (dicesAttacker <= dicesDefensive) {
             attacker.setNrOfDices(1);
-            if (mode != 4){
-//                JOptionPane.showMessageDialog(null,
-//                        "Player " + attacker.getPlayer() + " moves from " + attacker.getIndex() + " to " + defensive.getIndex() + "\n" +
-//                                dicesAttacker + " to " + dicesDefensive + "\n" +
-//                                "Fight lost!");
+            if (mode != 4) {
+                //                JOptionPane.showMessageDialog(null,
+                //                        "Player " + attacker.getPlayer() + " moves from " + attacker.getIndex() + " to " + defensive.getIndex() + "\n" +
+                //                                dicesAttacker + " to " + dicesDefensive + "\n" +
+                //                                "Fight lost!");
             }
             //System.out.println("lost");
             result = false;
@@ -105,10 +103,10 @@ public class GameState {
             attacker.setNrOfDices(1);
             defensive.setPlayer(attacker.getPlayer());
 
-            if(mode != 4) {
-            JOptionPane.showMessageDialog(null,
-                    "Player " + attacker.getPlayer() + " moves from " + attacker.getIndex() + " to " + defensive.getIndex() + "\n" +
-                            dicesAttacker + " to " + dicesDefensive + "\n" + "Fight won!");
+            if (mode != 4) {
+                JOptionPane.showMessageDialog(null,
+                        "Player " + attacker.getPlayer() + " moves from " + attacker.getIndex() + " to " + defensive.getIndex() + "\n" +
+                                dicesAttacker + " to " + dicesDefensive + "\n" + "Fight won!");
             }
             //System.out.println("won");
             result = true;
@@ -119,15 +117,15 @@ public class GameState {
         return result;
     }
 
-
     // editted by Lukasz
     public void addDicesToFields(int player) {
         int mostAdjacentEdges = 0;
         //determine max adjacent edges
         for (Vertex vertex : vertices) {
             if (vertex.getPlayer() == player) {
-                if (vertex.getNrOfAdjacentEdges() > mostAdjacentEdges)
+                if (vertex.getNrOfAdjacentEdges() > mostAdjacentEdges) {
                     mostAdjacentEdges = vertex.getNrOfAdjacentEdges();
+                }
             }
         }
         //System.out.println(player);
@@ -137,7 +135,7 @@ public class GameState {
             if (vertex.getPlayer() == player) {
                 int newDices = rand.nextInt(mostAdjacentEdges);
                 if ((vertex.getNrOfDices() + newDices) > 8) {
-                    mostAdjacentEdges += (vertex.getNrOfDices()+newDices-8);
+                    mostAdjacentEdges += (vertex.getNrOfDices() + newDices - 8);
                     vertex.setNrOfDices(8);
                 }
 
@@ -167,7 +165,7 @@ public class GameState {
             }
         }
 
-        if(roundsCount < 1000) {
+        if (roundsCount < 1000) {
             if (player1 == 0 || player2 == 0) {
                 if (vertices.get(0).getPlayer() == 1) {
                     whoWon = 1;
@@ -176,14 +174,12 @@ public class GameState {
                 }
                 System.out.print(whoWon);
             }
-        }
-        else {
+        } else {
             whoWon = player1 > player2 ? 1 : 2;
         }
 
         return whoWon > 0;
     }
-
 
     private ArrayList<Integer> createPlayersShuffle() {
         ArrayList<Integer> players = new ArrayList();
@@ -231,7 +227,6 @@ public class GameState {
             vertex.setNrOfDices(generateRandomDices());
         }
     }
-
 
     int throwTheDice(int dices) {
         Random rand = new Random();
@@ -332,7 +327,7 @@ public class GameState {
             subjugationSuccess(attackerVertex, defenderVertex);
             validMove = true;
         } else {
-            JOptionPane.showMessageDialog(null, "Invalid move!\n"+a+"\n"+b+"\n"+c+"\n"+d);
+            JOptionPane.showMessageDialog(null, "Invalid move!\n" + a + "\n" + b + "\n" + c + "\n" + d);
             validMove = false;
         }
 
@@ -349,6 +344,5 @@ public class GameState {
     public int getWhoseTurn() {
         return whoseTurn;
     }
-
 
 }

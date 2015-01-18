@@ -115,14 +115,14 @@ public class CLIPSAgent implements Agent {
                 verticesAdjacentToMine,
                 allVertices,
                 playerNumber);
-        Integer mineDicesCountInCurrentVertex = fclParameters.getMineDicesCountInCurrentVertex();
-        Integer enemysDicesCountInCurrentVertex = fclParameters.getEnemysDicesCountInCurrentVertex();
-        Double overallPossesion = fclParameters.getOverallPossesion();
-        Double range1Possesion = fclParameters.getRange1Possesion();
-        Double range2Possesion = fclParameters.getRange2Possesion();
-        Double range3Possesion = fclParameters.getRange3Possesion();
-        Integer mineOverallDicesCount = fclParameters.getMineOverallDicesCount();
-        Integer enemysOverallDicesCount = fclParameters.getEnemysOverallDicesCount();
+        Integer mineDicesCountInCurrentVertex = fclParameters.getDicesAmountInCurrentVertex();
+        Integer enemysDicesCountInCurrentVertex = fclParameters.getDicesAmountInVertexToAttack();
+        Double overallPossesion = fclParameters.getMineOverallDicesPossessionRatio();
+        Double range1Possesion = fclParameters.getRange1Possession();
+        Double range2Possesion = fclParameters.getRange2Possession();
+        Double range3Possesion = fclParameters.getRange3Possession();
+        Integer mineOverallDicesCount = fclParameters.getMineOverallDicesAmount();
+        Integer enemysOverallDicesCount = fclParameters.getEnemiesOverallDicesAmount();
 
         clips.reset(); // Reset the values
 
