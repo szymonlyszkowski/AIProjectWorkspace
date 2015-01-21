@@ -49,7 +49,7 @@ public class FuzzyAgentSzymon implements Agent {
         if (fis == null) {
             throw new FileNotFoundException("Can't load file: '" + filename + "'");
         }
-        functionBlock = fis.getFunctionBlock(null);
+        functionBlock = fis.getFunctionBlock("diceWarsGame");
     }
 
     @Override

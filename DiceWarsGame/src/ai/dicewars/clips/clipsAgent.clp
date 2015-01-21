@@ -11,6 +11,11 @@
 	(slot range1Possesion (type FLOAT))
 	(slot range2Possesion (type FLOAT))
 	(slot range3Possesion (type FLOAT))
+	(slot overallPossesion (type FLOAT))
+    (slot mineSafeVertexAmount (type INTEGER))
+    (slot mineOverallVertexAmount (type INTEGER))
+    (slot mineOverallVertexPossessionRatio (type FLOAT))
+    (slot enemiesOverallVertexAmount (type INTEGER))
 )
 
 ;Global order variables that are fetched by the handler class.

@@ -107,12 +107,11 @@ public class CLIPSAgent implements Agent {
     }
 
     private CLIPSDecision determineDecision(Vertex mineVertex,
-            Vertex enemysVertex,
+            Vertex enemiesVertex,
             ArrayList<Vertex> verticesAdjacentToMine,
             ArrayList<Vertex> allVertices) throws CLIPSError {
         FCLParameters fclParameters = new FCLParameters(mineVertex,
-                enemysVertex,
-                verticesAdjacentToMine,
+                enemiesVertex,
                 allVertices,
                 playerNumber);
         Integer mineDicesCountInCurrentVertex = fclParameters.getDicesAmountInCurrentVertex();
@@ -123,6 +122,10 @@ public class CLIPSAgent implements Agent {
         Double range3Possesion = fclParameters.getRange3Possession();
         Integer mineOverallDicesCount = fclParameters.getMineOverallDicesAmount();
         Integer enemysOverallDicesCount = fclParameters.getEnemiesOverallDicesAmount();
+        Integer mineSafeVertexAmount = fclParameters.getMineSafeVertexAmount();
+        Integer mineOverallVertexAmount = fclParameters.getMineOverallVertexAmount();
+        Double mineOverallVertexPossessionRatio = fclParameters.getMineOverallVertexPossessionRatio();
+        Integer enemiesOverallVertexAmount = fclParameters.getEnemiesOverallVertexAmount();
 
         clips.reset(); // Reset the values
 
@@ -135,7 +138,12 @@ public class CLIPSAgent implements Agent {
         clips.assertString("(game_situation (range3Possesion " + Double.toString(range3Possesion) + "))");
         clips.assertString("(game_situation (mineOverallDicesCount " + Integer.toString(mineOverallDicesCount) + "))");
         clips.assertString("(game_situation (enemysOverallDicesCount " + Integer.toString(enemysOverallDicesCount) + "))");
-        clips.assertString("(mojazmienna 99)");
+        clips.assertString("(game_situation (mineSafeVertexAmount " + Integer.toString(mineSafeVertexAmount) + "))");
+        clips.assertString("(game_situation (mineOverallVertexAmount " + Integer.toString(mineOverallVertexAmount) + "))");
+        clips.assertString("(game_situation (mineOverallVertexPossessionRatio " + Double.toString(mineOverallVertexPossessionRatio) + "))");
+        clips.assertString("(game_situation (enemiesOverallVertexAmount " + Integer.toString(enemiesOverallVertexAmount) + "))");
+
+
         //clips.assertString("(game_situation (mineDicesCountInCurrentVertex " + Integer.toString(mineDicesCountInCurrentVertex) + ") (enemysDicesCountInCurrentVertex " + Integer.toString(enemysDicesCountInCurrentVertex) + ") (overallPossesion " + Double.toString(overallPossesion) + ") (range1Possesion " + Double.toString(range1Possesion) + ") (range2Possesion " + Double.toString(range2Possesion) + ") (range3Possesion " + Double.toString(range3Possesion) + ") (mineOverallDicesCount " + Integer.toString(mineOverallDicesCount) + ") (enemysOverallDicesCount " + Integer.toString(enemysOverallDicesCount) + "))");
 
         //clips.assertString("(node (idNumber 1) (belongsTo 2) (squares 3) (circles 4) (triangles 5) (unitCreationType 6) (unitCreationSpeed 7) (availableAdjacentNodes "+a+" "+b+" "+c+" "+d+" "+e+") ))");

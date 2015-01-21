@@ -55,6 +55,8 @@ public class FCLParameters {
         range3Possession = getPossesion(getAdjacentInRange(mineVertex, allVertices, 3), playerNumber);
     }
 
+
+
     private double calculateMineOverallVertexPossessionRatio() {
 
         return (double) mineOverallVertexAmount / ((double) mineOverallVertexAmount + (double) enemiesOverallVertexAmount);
