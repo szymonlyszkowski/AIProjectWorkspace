@@ -143,11 +143,6 @@ public class CLIPSAgent implements Agent {
         clips.assertString("(game_situation (mineOverallVertexPossessionRatio " + Double.toString(mineOverallVertexPossessionRatio) + "))");
         clips.assertString("(game_situation (enemiesOverallVertexAmount " + Integer.toString(enemiesOverallVertexAmount) + "))");
 
-
-        //clips.assertString("(game_situation (mineDicesCountInCurrentVertex " + Integer.toString(mineDicesCountInCurrentVertex) + ") (enemysDicesCountInCurrentVertex " + Integer.toString(enemysDicesCountInCurrentVertex) + ") (overallPossesion " + Double.toString(overallPossesion) + ") (range1Possesion " + Double.toString(range1Possesion) + ") (range2Possesion " + Double.toString(range2Possesion) + ") (range3Possesion " + Double.toString(range3Possesion) + ") (mineOverallDicesCount " + Integer.toString(mineOverallDicesCount) + ") (enemysOverallDicesCount " + Integer.toString(enemysOverallDicesCount) + "))");
-
-        //clips.assertString("(node (idNumber 1) (belongsTo 2) (squares 3) (circles 4) (triangles 5) (unitCreationType 6) (unitCreationSpeed 7) (availableAdjacentNodes "+a+" "+b+" "+c+" "+d+" "+e+") ))");
-
         clips.run(); // Runs the agent
 
         String chosenAction = "?*decision*";
