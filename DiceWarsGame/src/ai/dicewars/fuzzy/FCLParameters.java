@@ -136,10 +136,6 @@ public class FCLParameters {
         return mineSafeVertexAmount;
     }
 
-    public int getEnemiesOverallVertexAmount() {
-        return enemiesOverallVertexAmount;
-    }
-
     public int getMineOverallVertexAmount() {
         return mineOverallVertexAmount;
     }

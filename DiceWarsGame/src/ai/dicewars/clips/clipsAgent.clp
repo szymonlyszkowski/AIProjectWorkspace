@@ -14,7 +14,6 @@
     (slot mineSafeVertexAmount (type INTEGER))
     (slot mineOverallVertexAmount (type INTEGER))
     (slot mineOverallVertexPossessionRatio (type FLOAT))
-    (slot enemiesOverallVertexAmount (type INTEGER))
 )
 
 
@@ -82,6 +81,18 @@
     )
 )
 
+(defrule mineOverallVertexPossessionRatioSTATUS
+    (game_situation (mineOverallVertexPossessionRatio ?valueRatio))
+    =>
+    (if (> ?valueRatio 0.5)
+        then
+        (printout t ?valueRatio " is my overall vertex possession and is greater than 50%" crlf)
+        (+ ?*decision* 5)
+        else
+        (printout t ?valueRatio " is my overall vertex possession and is smaller than 50%" crlf)
+        (+ ?*decision* 4)
+    )
+)
 
 
 

@@ -122,7 +122,6 @@ public class FuzzyAgentSzymon implements Agent {
         functionBlock.setVariable("mineSafeVertexAmount", fclParameters.getMineSafeVertexAmount());
         functionBlock.setVariable("mineOverallVertexAmount", fclParameters.getMineOverallVertexAmount());
         functionBlock.setVariable("mineOverallVertexPossessionRatio", fclParameters.getMineOverallVertexPossessionRatio());
-        functionBlock.setVariable("enemiesOverallVertexAmount", fclParameters.getEnemiesOverallVertexAmount());
 
         functionBlock.evaluate();
         // is the line below really needed?

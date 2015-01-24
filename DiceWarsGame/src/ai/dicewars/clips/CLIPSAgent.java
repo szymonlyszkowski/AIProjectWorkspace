@@ -125,7 +125,6 @@ public class CLIPSAgent implements Agent {
         Integer mineSafeVertexAmount = fclParameters.getMineSafeVertexAmount();
         Integer mineOverallVertexAmount = fclParameters.getMineOverallVertexAmount();
         Double mineOverallVertexPossessionRatio = fclParameters.getMineOverallVertexPossessionRatio();
-        Integer enemiesOverallVertexAmount = fclParameters.getEnemiesOverallVertexAmount();
 
         clips.reset(); // Reset the values
 
@@ -141,7 +140,6 @@ public class CLIPSAgent implements Agent {
         clips.assertString("(game_situation (mineSafeVertexAmount " + Integer.toString(mineSafeVertexAmount) + "))");
         clips.assertString("(game_situation (mineOverallVertexAmount " + Integer.toString(mineOverallVertexAmount) + "))");
         clips.assertString("(game_situation (mineOverallVertexPossessionRatio " + Double.toString(mineOverallVertexPossessionRatio) + "))");
-        clips.assertString("(game_situation (enemiesOverallVertexAmount " + Integer.toString(enemiesOverallVertexAmount) + "))");
 
         clips.run(); // Runs the agent
 
