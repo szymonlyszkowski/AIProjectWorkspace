@@ -29,7 +29,7 @@
          (test (> ?mineDicesCountInCurrentVertex 7))
 	=>
 	(printout t ?mineDicesCountInCurrentVertex "is in my current vertex" crlf)
-	(+ ?*decision* 5)
+	(bind ?*decision* (+ ?*decision* 6))
 )
 
 (defrule enemysDicesCountInCurrentVertexIS_MAX
@@ -37,7 +37,7 @@
           (test (> ?value 7))
 	 =>
 	(printout t ?value "is in enemy current vertex" crlf)
-	(- ?*decision* 5)
+	(bind ?*decision* (- ?*decision* 4))
 )
 
 
@@ -47,10 +47,10 @@
    (if(> ?valueMine ?valueEnemy)
    then
    (printout t ?valueMine " is mine overall possession concerning dices is better" crlf)
-    (+ ?*decision* 2)
+    (bind ?*decision* (+ ?*decision* 2))
     else
        (printout t ?valueMine " is mine overall possession concerning dices is worse" crlf)
-        (- ?*decision* 2)
+        (bind ?*decision* (- ?*decision* 2))
 	)
 )
 
@@ -60,24 +60,24 @@
 	(if (> ?valuePossession 0.7)
 		then
 		(printout t ?valuePossession " is my overall possession and is greater than 60%" crlf)
-		(+ ?*decision* 5)
+		(bind ?*decision* (+ ?*decision* 5))
 		else
 		(printout t ?valuePossession " is my overall possession and is smaller than 60%" crlf)
-		(- ?*decision* 2)
+		(bind ?*decision* (- ?*decision* 2))
 	)
 )
 
 (defrule mineSafeVertexAmountSTATUS
 	(game_situation (mineSafeVertexAmount ?value) (mineOverallVertexAmount ?overall))
-	(+ ?value 3)
 	=>
+	(bind ?value (+ ?value 3))
 	(if (or (> ?value ?overall) (= ?value ?overall))
 	    then
 	   (printout t ?value " are my save vertices I attack" crlf)
-	   (+ ?*decision* 5)
+	   (bind ?*decision* (+ ?*decision* 5))
 	   else
        (printout t ?value " are my save vertices I discourage attack" crlf)
-       (- ?*decision* 3)
+       (bind ?*decision* (- ?*decision* 3))
     )
 )
 
@@ -87,18 +87,13 @@
     (if (> ?valueRatio 0.5)
         then
         (printout t ?valueRatio " is my overall vertex possession and is greater than 50%" crlf)
-        (+ ?*decision* 5)
+        (bind ?*decision* (+ ?*decision* 5))
         else
         (printout t ?valueRatio " is my overall vertex possession and is smaller than 50%" crlf)
-        (+ ?*decision* 4)
+        (bind ?*decision* (+ ?*decision* 1))
     )
 )
-
-
-
-
 (defrule endTurn
-=>
-(bind ?*decision*)
+	=>
+	(printout t "DECISION VALUE: " ?*decision* crlf)
 )
-

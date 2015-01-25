@@ -140,19 +140,14 @@ public class CLIPSAgent implements Agent {
         clips.assertString("(game_situation (mineSafeVertexAmount " + Integer.toString(mineSafeVertexAmount) + "))");
         clips.assertString("(game_situation (mineOverallVertexAmount " + Integer.toString(mineOverallVertexAmount) + "))");
         clips.assertString("(game_situation (mineOverallVertexPossessionRatio " + Double.toString(mineOverallVertexPossessionRatio) + "))");
-
         clips.run(); // Runs the agent
-
         String chosenAction = "?*decision*";
-
         int decision = 0;
         try {
-            decision = clips.eval(chosenAction).hashCode();
-            //System.out.println(response.intValue());
+            decision = Integer.parseInt(String.valueOf(clips.eval(chosenAction)));
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return decision > 5 ? CLIPSDecision.Fight : CLIPSDecision.DoNothing;
     }
 
