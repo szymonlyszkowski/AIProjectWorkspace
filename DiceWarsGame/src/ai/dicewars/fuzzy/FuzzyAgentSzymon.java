@@ -111,14 +111,11 @@ public class FuzzyAgentSzymon implements Agent {
                 allVertices,
                 playerNumber);
 
-        functionBlock.setVariable("mineDicesCountInCurrentVertex", fclParameters.getDicesAmountInCurrentVertex());
-        functionBlock.setVariable("enemiesDicesCountInCurrentVertex", fclParameters.getDicesAmountInVertexToAttack());
+        functionBlock.setVariable("dicesAmountInCurrentVertex", fclParameters.getDicesAmountInCurrentVertex());
+        functionBlock.setVariable("dicesAmountInVertexToAttack", fclParameters.getDicesAmountInVertexToAttack());
         functionBlock.setVariable("mineOverallDicesPossessionRatio", fclParameters.getMineOverallDicesPossessionRatio());
-        functionBlock.setVariable("range1Possession", fclParameters.getRange1Possession());
-        functionBlock.setVariable("range2Possession", fclParameters.getRange2Possession());
-        functionBlock.setVariable("range3Possession", fclParameters.getRange3Possession());
-        functionBlock.setVariable("mineOverallDicesCount", fclParameters.getMineOverallDicesAmount());
-        functionBlock.setVariable("enemiesOverallDicesCount", fclParameters.getEnemiesOverallDicesAmount());
+        functionBlock.setVariable("mineOverallDicesAmount", fclParameters.getMineOverallDicesAmount());
+        functionBlock.setVariable("enemiesOverallDicesAmount", fclParameters.getEnemiesOverallDicesAmount());
         functionBlock.setVariable("mineSafeVertexAmount", fclParameters.getMineSafeVertexAmount());
         functionBlock.setVariable("mineOverallVertexAmount", fclParameters.getMineOverallVertexAmount());
         functionBlock.setVariable("mineOverallVertexPossessionRatio", fclParameters.getMineOverallVertexPossessionRatio());
