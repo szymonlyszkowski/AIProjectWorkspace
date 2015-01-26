@@ -94,7 +94,7 @@ public class CLIPSAgent implements Agent {
                         case Fight:
                             return new AnswerEx(false, currentVertex.getIndex(), currentVertex2.getIndex());
                         case DoNothing:
-                            break;
+                            return new AnswerEx(true, 0, 0);
                         }
                     }
                 } // end of adjacent vertices iteration

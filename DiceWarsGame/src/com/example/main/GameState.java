@@ -172,7 +172,7 @@ public class GameState {
                 } else {
                     whoWon = 2;
                 }
-                System.out.print(whoWon);
+                System.out.print("Winning player: " + whoWon);
             }
         } else {
             whoWon = player1 > player2 ? 1 : 2;
@@ -315,19 +315,17 @@ public class GameState {
     public void doMove(Vertex attackerVertex, Vertex defenderVertex) {
         boolean a = (attackerVertex.getAdjacencyList()).indexOf(defenderVertex.getIndex()) >= 0;
         boolean b = attackerVertex.getPlayer() != defenderVertex.getPlayer();
-        boolean c = attackerVertex.getNrOfDices() > 1;
         boolean d = attackerVertex.getPlayer() == whoseTurn;
         if (a
                 &&
                 b
                 &&
-                c
-                && d
+                d
                 ) {
             subjugationSuccess(attackerVertex, defenderVertex);
             validMove = true;
         } else {
-            JOptionPane.showMessageDialog(null, "Invalid move!\n" + a + "\n" + b + "\n" + c + "\n" + d);
+            JOptionPane.showMessageDialog(null, "Invalid move!\n" + a + "\n" + b + "\n" + "\n" + d);
             validMove = false;
         }
 
