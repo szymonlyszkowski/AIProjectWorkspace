@@ -3,7 +3,6 @@ package ai.dicewars.agent;
 import ai.dicewars.common.Agent;
 import ai.dicewars.common.Answer;
 import ai.dicewars.common.AnswerEx;
-import com.example.main.Graph;
 import com.example.main.Vertex;
 
 import java.util.ArrayList;
@@ -18,10 +17,20 @@ public class BfsAgentSzymon implements Agent {
 
     private int playerNumber;
 
+    //To keep track of the nodes we check so we know if it connects to the source.
+    //If a node was checked, then there is a path to the node from a source
+    private boolean[] checked;
+
+    public ArrayList<Vertex> init(ArrayList<Vertex> vertices, Vertex rootVertex) {
+        //Initialize arrays with the size of the graph
+        checked = new boolean[vertices.size()];
+        return bfs(vertices, rootVertex, playerNumber);
+    }
+
     public BfsAgentSzymon() {
     }
 
-    public ArrayList<Vertex> bfs(Graph graph, Vertex root, int playerNumber) {
+    private ArrayList<Vertex> bfs(ArrayList<Vertex> vertexes, Vertex root, int playerNumber) {
         ArrayList<Vertex> qualifiedToBeAttacked = new ArrayList<Vertex>();
         Queue<Vertex> queue = new LinkedBlockingQueue<Vertex>();
         System.out.println("ROOT" + root.getIndex());
@@ -30,44 +39,18 @@ public class BfsAgentSzymon implements Agent {
         //for every child
 
         while (!queue.isEmpty()) {
-            Vertex vertex = queue.poll();
-            System.out.println("\n" + "VERTEX POLLED" + vertex.getIndex());
-            ArrayList<Integer> adjacencyList = vertex.getAdjacencyList();
-            for (Integer vertexIndex : adjacencyList) {
-                Vertex vertexConsidered = graph.getGraphStructure().get(vertexIndex);
+            Vertex currentVertex = queue.poll();
+            System.out.println("\n" + "VERTEX POLLED" + currentVertex.getIndex());
+            ArrayList<Vertex> adjacentVertices = getAdjacentVertices(currentVertex, vertexes);
+            for (Vertex child : adjacentVertices) {
 
-                if (!(vertexConsidered.getPlayer() == playerNumber) && vertexConsidered.getNrOfDices() < 3) {
-                    queue.add(vertexConsidered);
-                    qualifiedToBeAttacked.add(vertexConsidered);
-                    System.out.print("Child ID:" + vertexConsidered.getIndex() + "\t");
-                }
+                if (!(child.getPlayer() == playerNumber) && child.getNrOfDices() < 3 && !checked[child.getIndex()]) {
 
-            }
-
-        }
-        return qualifiedToBeAttacked;
-
-    }
-
-    public ArrayList<Vertex> bfs(ArrayList<Vertex> vertexes, Vertex root, int playerNumber) {
-        ArrayList<Vertex> qualifiedToBeAttacked = new ArrayList<Vertex>();
-        Queue<Vertex> queue = new LinkedBlockingQueue<Vertex>();
-        System.out.println("ROOT" + root.getIndex());
-
-        queue.add(root);
-        //for every child
-
-        while (!queue.isEmpty()) {
-            Vertex vertex = queue.poll();
-            System.out.println("\n" + "VERTEX POLLED" + vertex.getIndex());
-            ArrayList<Integer> adjacencyList = vertex.getAdjacencyList();
-            for (Integer vertexIndex : adjacencyList) {
-                Vertex vertexConsidered = vertexes.get(vertexIndex);
-
-                if (!(vertexConsidered.getPlayer() == playerNumber) && vertexConsidered.getNrOfDices() < 3) {
-                    queue.add(vertexConsidered);
-                    qualifiedToBeAttacked.add(vertexConsidered);
-                    System.out.print("Child ID:" + vertexConsidered.getIndex() + "\t");
+                    //So we don't check this node again
+                    checked[child.getIndex()] = true;
+                    queue.add(child);
+                    qualifiedToBeAttacked.add(child);
+                    System.out.print("Child ID:" + child.getIndex() + "\t");
                 }
 
             }
@@ -84,7 +67,7 @@ public class BfsAgentSzymon implements Agent {
             // iterate through all of my vertices
             Vertex currentVertex = vertices.get(i);
             if (isVertexMine(currentVertex)) {
-                ArrayList<Vertex> qualifiedToAttack = bfs(vertices, currentVertex, playerNumber);
+                ArrayList<Vertex> qualifiedToAttack = init(vertices, currentVertex);
 
                 if (qualifiedToAttack.size() > 0) {
 
@@ -95,7 +78,15 @@ public class BfsAgentSzymon implements Agent {
                             smallestAmountDices = v;
                         }
                     }
-                    return new AnswerEx(false, currentVertex.getIndex(), smallestAmountDices.getIndex());
+
+                    ArrayList<Vertex> adjacentVertices = getAdjacentVertices(smallestAmountDices, vertices);
+                    for (Vertex v : adjacentVertices) {
+                        if (v.getPlayer() == playerNumber) {
+                            return new AnswerEx(false, v.getIndex(), smallestAmountDices.getIndex());
+
+                        }
+                    }
+
                 } else {
                     return new AnswerEx(true, 0, 0);
                 }
