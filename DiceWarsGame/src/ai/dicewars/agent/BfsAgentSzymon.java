@@ -18,9 +18,7 @@ public class BfsAgentSzymon implements Agent {
 
     private int playerNumber;
 
-    public BfsAgentSzymon(int playerNumber) {
-
-        this.playerNumber = playerNumber;
+    public BfsAgentSzymon() {
     }
 
     public ArrayList<Vertex> bfs(Graph graph, Vertex root, int playerNumber) {
