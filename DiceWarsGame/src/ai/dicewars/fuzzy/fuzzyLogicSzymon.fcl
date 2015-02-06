@@ -85,7 +85,7 @@ END_FUZZIFY
 
 DEFUZZIFY decision
 	TERM doNothing := (0,0) (5,1) (5,0);
-	TERM fight := (1,0) (5,1) (1000000, 1);
+	TERM fight := (5,0) (5,1) (100, 1);
 	METHOD : COG;		// Use 'Center Of Gravity' defuzzification method
 	DEFAULT := 0;		// Default value is 0 (if no rule activates defuzzifier)
 END_DEFUZZIFY
@@ -105,6 +105,14 @@ RULEBLOCK No1
     RULE 8 : IF ((mineOverallVertexPossessionRatio IS ok) OR (mineOverallVertexPossessionRatio IS plenty) OR (mineOverallVertexPossessionRatio is average))
     THEN decision IS fight;
     RULE 9: IF mineSafeVertexAmount is plenty THEN decision is fight;
+    RULE 10: IF ((enemiesOverallVertexAmount IS little) OR (enemiesOverallVertexAmount IS average)) THEN decision IS fight;
+    RULE 11: IF ((enemiesOverallVertexAmount IS ok) OR (enemiesOverallVertexAmount IS plenty)) THEN decision IS fight;
+    RULE 12: IF ((mineOverallVertexPossessionRatio IS average) OR (mineOverallVertexPossessionRatio IS ok) OR (mineOverallVertexPossessionRatio IS plenty))
+    THEN decision IS fight;
+    RULE 13: IF ((mineOverallVertexPossessionRatio IS little) THEN decision is fight);
+    RULE 14: IF ((mineOverallVertexAmount IS average) OR (mineOverallVertexAmount IS ok) OR (mineOverallVertexAmount IS plenty)) THEN decision IS fight;
+    RULE 15: IF ((mineOverallVertexAmount IS little)) THEN decision is doNothing;
+
 
 END_RULEBLOCK
 

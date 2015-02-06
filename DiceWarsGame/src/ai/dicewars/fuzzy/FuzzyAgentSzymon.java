@@ -54,7 +54,6 @@ public class FuzzyAgentSzymon implements Agent {
 
     @Override
     public Answer makeMove(ArrayList<Vertex> vertices) {
-        Boolean isEmpty = true;
 
         /* A. iterate through all of my vertices
          *    for any of them fetch adjacent ones that belong to the enemy
