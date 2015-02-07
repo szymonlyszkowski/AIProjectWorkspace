@@ -39,12 +39,12 @@ public class BfsAgentSzymon implements Agent {
         //for every child
 
         while (!queue.isEmpty()) {
-            Vertex currentVertex = queue.poll();
-            System.out.println("\n" + "VERTEX POLLED" + currentVertex.getIndex());
-            ArrayList<Vertex> adjacentVertices = getAdjacentVertices(currentVertex, vertexes);
+            Vertex parent = queue.poll();
+            System.out.println("\n" + "VERTEX POLLED" + parent.getIndex());
+            ArrayList<Vertex> adjacentVertices = getAdjacentVertices(parent, vertexes);
             for (Vertex child : adjacentVertices) {
 
-                if (!(child.getPlayer() == playerNumber) && child.getNrOfDices() < 3 && !checked[child.getIndex()]) {
+                if (!(child.getPlayer() == playerNumber) && child.getNrOfDices() < parent.getNrOfDices() && !checked[child.getIndex()]) {
 
                     //So we don't check this node again
                     checked[child.getIndex()] = true;
@@ -61,13 +61,13 @@ public class BfsAgentSzymon implements Agent {
     }
 
     @Override public Answer makeMove(ArrayList<Vertex> vertices) {
-
+        ArrayList<Vertex> qualifiedToAttack = new ArrayList<Vertex>();
         int verticesSize = vertices.size();
         for (int i = 0; i < verticesSize; i++) {
             // iterate through all of my vertices
             Vertex currentVertex = vertices.get(i);
             if (isVertexMine(currentVertex)) {
-                ArrayList<Vertex> qualifiedToAttack = init(vertices, currentVertex);
+                qualifiedToAttack.addAll(init(vertices, currentVertex));
 
                 if (qualifiedToAttack.size() > 0) {
 
@@ -81,7 +81,7 @@ public class BfsAgentSzymon implements Agent {
 
                     ArrayList<Vertex> adjacentVertices = getAdjacentVertices(smallestAmountDices, vertices);
                     for (Vertex v : adjacentVertices) {
-                        if (v.getPlayer() == playerNumber) {
+                        if (v.getPlayer() == playerNumber && v.getNrOfDices() > smallestAmountDices.getNrOfDices()) {
                             return new AnswerEx(false, v.getIndex(), smallestAmountDices.getIndex());
 
                         }
